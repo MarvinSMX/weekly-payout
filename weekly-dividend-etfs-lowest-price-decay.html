@@ -49,7 +49,7 @@
     <link rel="android-chrome-192x192" href="/weekly-payout/android-chrome-192x192.png">
     <link rel="android-chrome-512x512" href="/weekly-payout/android-chrome-512x512.png">
     <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#C4F542">
+    <meta name="theme-color" content="#4D7C0F">
 
     
 
@@ -59,27 +59,27 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
-  /* Canonical tokens */
-  --bg: #09090B;
-  --surface: #121214;
-  --surface-2: #161618;
-  --ink: #F4F4F5;
-  --muted: #A1A1AA;
-  --line: #27272A;
-  --accent: #C4F542;
-  /* Extended / legacy aliases (same values) */
+  /* Canonical tokens — light theme */
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F5;
+  --ink: #111827;
+  --muted: #5B6575;
+  --line: #D8DEE8;
+  --accent: #4D7C0F;
+  /* Extended / legacy aliases */
   --ink-muted: var(--muted);
-  --ink-faint: #71717A;
+  --ink-faint: #8B95A5;
   --paper: var(--bg);
   --paper-2: var(--surface);
-  --line-strong: #3F3F46;
-  --header: #000000;
-  --header-ink: #FAFAFA;
-  --accent-soft: rgba(196, 245, 66, 0.12);
-  --accent-hover: #D9FF6B;
-  --on-accent: #000000;
-  --danger: #FF4D6A;
-  --pos: #C4F542;
+  --line-strong: #B8C0CE;
+  --header: #FFFFFF;
+  --header-ink: #111827;
+  --accent-soft: rgba(77, 124, 15, 0.10);
+  --accent-hover: #3F6212;
+  --on-accent: #FFFFFF;
+  --danger: #DC2626;
+  --pos: #4D7C0F;
   --shell: 94%;
   --shell-max: 1320px;
   --radius: 0;
@@ -87,18 +87,18 @@
   --font-display: "Syne", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   /* aliases for legacy site CSS */
-  --brand: var(--header);
-  --brand-dark: #000000;
-  --brand-mid: var(--surface);
-  --brand-lite: #1A1A1E;
+  --brand: var(--header-ink);
+  --brand-dark: #111827;
+  --brand-mid: var(--surface-2);
+  --brand-lite: #F8FAFC;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
-  --navy: var(--header);
+  --navy: var(--header-ink);
   --primary: var(--accent);
   --green: var(--accent);
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
-  --purple-deep: var(--header);
+  --purple-deep: var(--header-ink);
   --bg-primary: var(--bg);
   --bg-secondary: var(--surface);
   --bg-panel: var(--surface);
@@ -134,7 +134,7 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
 
-/* Wordmark header */
+/* Wordmark header — light */
 .nx-header, header.nx-header, body > header:not(.nx-skip) {
   width: 100%;
   background: var(--header);
@@ -160,7 +160,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.55);
+  color: var(--muted);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -176,7 +176,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--header-ink);
   background: transparent;
@@ -415,8 +415,8 @@ input[type="text"], select {
   overflow: hidden;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: var(--accent) !important;
+  background: var(--header-ink) !important;
+  color: #FFFFFF !important;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.68rem;
@@ -535,16 +535,16 @@ input[type="text"], select {
 
         html, body{margin:0;padding:0;overflow-x:hidden !important;width:100%;position:relative}
         :root{--navy:#000000;--red:#e74c3c;--green:#1e7e3a}
-        body{font-family:'Syne',Arial,sans-serif;background:#09090B;color:#F4F4F5;display:flex;flex-direction:column;align-items:center;min-height:100vh;line-height:1.6}
+        body{font-family:'Syne',Arial,sans-serif;background:#F3F5F8;color:#111827;display:flex;flex-direction:column;align-items:center;min-height:100vh;line-height:1.6}
         header{background:var(--navy);padding:8px 20px;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.3);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer;position:sticky;top:0;z-index:10}
         .banner-img{max-width:440px;width:82%;height:auto;display:block;margin:0 auto}
         @media(min-width:768px){.banner-img{max-width:440px}}
 
-        .site-network-bar{width:100%;background:#121214;border-bottom:1px solid #27272A;padding:8px 0}
+        .site-network-bar{width:100%;background:#FFFFFF;border-bottom:1px solid #D8DEE8;padding:8px 0}
         .site-network-track{max-width:1100px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:8px;overflow-x:auto;white-space:nowrap;-ms-overflow-style:none;scrollbar-width:none}
         .site-network-track::-webkit-scrollbar{display:none}
-        .site-network-label{font-size:0.68em;text-transform:uppercase;letter-spacing:0.5px;color:#71717A;font-weight:900;flex-shrink:0;margin-right:2px}
-        .site-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid var(--navy);background:#121214;color:var(--navy);font-size:0.8em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s ease,color .15s ease}
+        .site-network-label{font-size:0.68em;text-transform:uppercase;letter-spacing:0.5px;color:#8B95A5;font-weight:900;flex-shrink:0;margin-right:2px}
+        .site-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid var(--navy);background:#FFFFFF;color:var(--navy);font-size:0.8em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s ease,color .15s ease}
         .site-pill:hover{background:var(--navy);color:#fff}
         .site-pill.current{background:var(--navy);color:#fff;cursor:default}
 
@@ -552,17 +552,17 @@ input[type="text"], select {
         .main-h1 h1{font-size:1.55em;margin:0;color:var(--navy);line-height:1.3;font-weight:900}
         .main-h1 span{display:block;font-size:0.78em;color:var(--red);font-weight:900;margin-top:6px;opacity:0.9}
         .content{width:94%;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
-        .top-disclaimer{max-width:840px;margin:20px auto 15px;padding:0 15px;text-align:center;font-size:0.84em;line-height:1.8;color:#F4F4F5}
+        .top-disclaimer{max-width:840px;margin:20px auto 15px;padding:0 15px;text-align:center;font-size:0.84em;line-height:1.8;color:#111827}
         .top-disclaimer strong{color:#c62828;font-weight:900}
-        .top-disclaimer .highlight{background:#1212148e1;padding:2px 6px;border-radius:4px;font-weight:900;color:#d32f2f}
+        .top-disclaimer .highlight{background:#FFFFFF8e1;padding:2px 6px;border-radius:4px;font-weight:900;color:#d32f2f}
         .banner{width:100%;text-align:center;margin:25px 0 15px}
         .banner img{max-width:100%;height:auto;border-radius:12px}
-        .breadcrumb{max-width:1100px;width:94%;margin:14px auto 0;font-size:0.82em;color:#A1A1AA}
+        .breadcrumb{max-width:1100px;width:94%;margin:14px auto 0;font-size:0.82em;color:#5B6575}
         .breadcrumb a{color:var(--navy);font-weight:700;text-decoration:none}
         .breadcrumb a:hover{text-decoration:underline}
-        .intro{max-width:840px;margin:10px auto 20px;padding:0 15px;font-size:1em;color:#F4F4F5}
+        .intro{max-width:840px;margin:10px auto 20px;padding:0 15px;font-size:1em;color:#111827}
         .intro h2{color:var(--navy);font-size:1.25em;margin:22px 0 10px}
-        .updated-badge{display:inline-block;background:#1212148e1;color:#d32f2f;font-weight:900;font-size:0.78em;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+        .updated-badge{display:inline-block;background:#FFFFFF8e1;color:#d32f2f;font-weight:900;font-size:0.78em;padding:4px 12px;border-radius:20px;margin-bottom:10px}
 
         /* LIVE STAT CENTERPIECE */
         .stat-hero{width:100%;max-width:700px;margin:20px auto 30px;background:var(--navy);border-radius:16px;padding:30px 20px;text-align:center;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,.25)}
@@ -571,23 +571,23 @@ input[type="text"], select {
         .stat-hero .stat-sub{font-size:0.9em;opacity:0.85;margin-top:10px}
         .stat-hero.loading .stat-number{font-size:1.2em;color:#fff}
 
-        .risk-banner{max-width:840px;margin:10px auto 25px;padding:16px 18px;background:#1212143e0;border:2px solid var(--red);border-radius:10px;font-size:0.88em;color:#7a2e0e}
+        .risk-banner{max-width:840px;margin:10px auto 25px;padding:16px 18px;background:#FFFFFF3e0;border:2px solid var(--red);border-radius:10px;font-size:0.88em;color:#7a2e0e}
         .risk-banner strong{color:var(--red)}
 
-        table.recap-table{width:100%;max-width:900px;margin:20px auto;border-collapse:collapse;background:#121214;border:3px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+        table.recap-table{width:100%;max-width:900px;margin:20px auto;border-collapse:collapse;background:#FFFFFF;border:3px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.2)}
         table.recap-table th{background:var(--navy);color:#fff;padding:10px 6px;font-size:.85em}
         table.recap-table td{padding:9px 6px;font-size:.88em;text-align:center;border-bottom:1px solid #eee}
-        table.recap-table tr:nth-child(even){background:#161618}
+        table.recap-table tr:nth-child(even){background:#EEF1F5}
         table.recap-table tbody tr{cursor:pointer}
         table.recap-table tbody tr:hover{background:rgba(255,255,255,0.04)}
         .symbol{font-weight:900;color:var(--navy)}
         .positive{color:#27ae60;font-weight:bold}
         .negative{color:#e74c3c;font-weight:bold}
         .no-decay-tag{background:#e8f8ee;color:var(--green);font-weight:900;padding:3px 9px;border-radius:20px;font-size:0.85em}
-        .table-loading{text-align:center;padding:30px;color:#A1A1AA;font-size:0.95em}
+        .table-loading{text-align:center;padding:30px;color:#5B6575;font-size:0.95em}
 
         .faq-block{max-width:840px;margin:10px auto 30px;padding:0 15px}
-        .faq-item{border-bottom:1px solid #27272A;padding:14px 0}
+        .faq-item{border-bottom:1px solid #D8DEE8;padding:14px 0}
         .faq-item h3{margin:0 0 6px;color:var(--navy);font-size:1.02em}
         .faq-item p{margin:0;font-size:0.92em}
         .cta-strip{max-width:900px;margin:20px auto;text-align:center;background:#000000;color:#fff;border-radius:12px;padding:24px 18px}
@@ -596,162 +596,173 @@ input[type="text"], select {
         .cta-strip-buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
         .cta-strip-buttons a{padding:9px 16px;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.4);border-radius:6px;color:#fff;text-decoration:none;font-weight:700;font-size:0.85em}
         .cta-strip-buttons a:hover{background:rgba(255,255,255,0.22)}
-        .cta-strip-buttons a.primary{background:#121214;color:var(--navy)}
+        .cta-strip-buttons a.primary{background:#FFFFFF;color:var(--navy)}
         .related-grid{display:grid;grid-template-columns:1fr;gap:12px;max-width:900px;margin:10px auto 30px;width:94%}
         @media(min-width:640px){.related-grid{grid-template-columns:repeat(2,1fr)}}
-        .related-card{background:#121214;border:2px solid #d8e3ef;border-radius:10px;padding:14px 16px;text-decoration:none;color:#F4F4F5;transition:all .2s}
+        .related-card{background:#FFFFFF;border:2px solid #d8e3ef;border-radius:10px;padding:14px 16px;text-decoration:none;color:#111827;transition:all .2s}
         .related-card:hover{border-color:var(--navy);box-shadow:0 4px 12px rgba(0,0,0,.1);transform:translateY(-2px)}
         .related-card h4{margin:0 0 4px;color:var(--navy);font-size:0.98em}
-        .related-card p{margin:0;font-size:0.82em;color:#A1A1AA}
-        .disclaimer{font-size:.9em;color:#A1A1AA;margin:20px auto;max-width:900px;line-height:1.5;text-align:center;padding:0 15px}
+        .related-card p{margin:0;font-size:0.82em;color:#5B6575}
+        .disclaimer{font-size:.9em;color:#5B6575;margin:20px auto;max-width:900px;line-height:1.5;text-align:center;padding:0 15px}
         .back-to-top{display:block;margin:12px auto 0;padding:7px 14px;background:var(--navy);color:#fff;font-weight:700;font-size:0.82em;border-radius:6px;text-decoration:none;box-shadow:0 3px 8px rgba(0,0,0,.2);transition:all .2s;cursor:pointer}
-        .back-to-top:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.3);background:#09090B}
-        .footer{margin-top:40px;padding:25px;background:#121214;width:100%;text-align:center;font-size:0.9em;color:#A1A1AA;border-top:1px solid #27272A}
+        .back-to-top:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.3);background:#F3F5F8}
+        .footer{margin-top:40px;padding:25px;background:#FFFFFF;width:100%;text-align:center;font-size:0.9em;color:#5B6575;border-top:1px solid #D8DEE8}
         .footer a{color:var(--navy);text-decoration:none;margin:0 12px;font-weight:700}
         .footer a:hover{text-decoration:underline}
         .footer .tagline{font-size:1.3em;font-weight:900;color:var(--navy);margin:20px 0}
         .footer .tagline a{color:var(--navy);text-decoration:none}
-        .footer-disclaimer{max-width:900px;margin:20px auto;font-size:0.82em;color:#A1A1AA;border-top:1px solid #27272A;padding-top:14px}
+        .footer-disclaimer{max-width:900px;margin:20px auto;font-size:0.82em;color:#5B6575;border-top:1px solid #D8DEE8;padding-top:14px}
     
 
-/* Force dark network chrome */
+
+/* Force light network chrome */
 :root {
-  --bg: #09090B !important;
-  --surface: #121214 !important;
-  --ink: #F4F4F5 !important;
-  --muted: #A1A1AA !important;
-  --line: #27272A !important;
-  --accent: #C4F542 !important;
-  --paper: #09090B !important;
-  --paper-2: #121214 !important;
-  --ink-muted: #A1A1AA !important;
-  --text-primary: #F4F4F5 !important;
-  --text-secondary: #A1A1AA !important;
-  --bg-primary: #09090B !important;
-  --bg-secondary: #121214 !important;
-  --gold: #C4F542 !important;
+  --bg: #F3F5F8 !important;
+  --surface: #FFFFFF !important;
+  --surface-2: #EEF1F5 !important;
+  --ink: #111827 !important;
+  --muted: #5B6575 !important;
+  --line: #D8DEE8 !important;
+  --accent: #4D7C0F !important;
+  --paper: #F3F5F8 !important;
+  --paper-2: #FFFFFF !important;
+  --ink-muted: #5B6575 !important;
+  --ink-faint: #8B95A5 !important;
+  --header: #FFFFFF !important;
+  --header-ink: #111827 !important;
+  --text-primary: #111827 !important;
+  --text-secondary: #5B6575 !important;
+  --bg-primary: #F3F5F8 !important;
+  --bg-secondary: #FFFFFF !important;
+  --gold: #4D7C0F !important;
   --gold2: var(--accent-hover) !important;
-  --green: #C4F542 !important;
-  --primary: #C4F542 !important;
-  --navy: #000000 !important;
-  --brand: #000000 !important;
-  --light: #121214 !important;
+  --green: #4D7C0F !important;
+  --primary: #4D7C0F !important;
+  --navy: #111827 !important;
+  --brand: #111827 !important;
+  --light: #FFFFFF !important;
+  --on-accent: #FFFFFF !important;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 header, .nx-header {
-  background: var(--header) !important;
-  color: var(--header-ink) !important;
-  border-bottom: 2px solid #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-bottom: 2px solid #4D7C0F !important;
 }
-.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
-.logo span, .nx-logo span { color: #C4F542 !important; }
-.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
-.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.logo, .nx-logo, .logo-text { color: #111827 !important; }
+.logo span, .nx-logo span { color: #4D7C0F !important; }
+.logo-sub, .nx-tagline { color: #5B6575 !important; }
+.header-link, .nx-nav a {
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
+  background: transparent !important;
+}
 .header-link:hover, .nx-nav a:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .hero, .nx-hero, main > .hero, section.hero, .main-h1 {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 .hero h1, .nx-hero h1, section.hero h1, h1 {
-  color: var(--ink) !important;
+  color: #111827 !important;
 }
 .hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
 .site-network-label, .table-meta, .footer, footer {
-  color: var(--muted) !important;
+  color: #5B6575 !important;
 }
 .site-network-bar {
-  background: var(--surface) !important;
-  border-bottom: 1px solid var(--line) !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #D8DEE8 !important;
 }
 .site-pill {
   background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #111827 !important;
+  border: 1px solid #B8C0CE !important;
   border-radius: 0 !important;
 }
 .site-pill:hover {
-  background: var(--accent-soft) !important;
-  color: #C4F542 !important;
-  border-color: #C4F542 !important;
+  background: rgba(0,0,0,0.04) !important;
+  color: #4D7C0F !important;
+  border-color: #4D7C0F !important;
 }
 .site-pill.current {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .chip {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #4D7C0F !important;
 }
 .chip:hover, .chip.active {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 #filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
 input[type="text"], input[type="search"], select, textarea {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line-strong) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
 }
 #filters input::placeholder, input::placeholder {
-  color: var(--ink-faint) !important;
+  color: #8B95A5 !important;
 }
 #etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
-  background: var(--surface) !important;
-  border-color: var(--line) !important;
-  color: var(--ink) !important;
+  background: #FFFFFF !important;
+  border-color: #D8DEE8 !important;
+  color: #111827 !important;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: #C4F542 !important;
-  border-bottom-color: #C4F542 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #4D7C0F !important;
 }
 #etfTable td, table td {
-  color: var(--ink) !important;
-  border-bottom-color: var(--line) !important;
+  color: #111827 !important;
+  border-bottom-color: #D8DEE8 !important;
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
 tr:nth-child(even) {
-  background: #161618 !important;
+  background: #EEF1F5 !important;
 }
 #etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
-  background: var(--accent-soft) !important;
+  background: rgba(0,0,0,0.03) !important;
 }
 .symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
 .yield, .decay, td:before, .tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .footer a, footer a, a.tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .stat, .faq, .rel, .info-card, .card, .panel {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D8DEE8 !important;
 }
-.vote-count, #voteMsg { color: #C4F542 !important; }
+.vote-count, #voteMsg { color: #4D7C0F !important; }
 .back-to-top {
   background: transparent !important;
-  color: #C4F542 !important;
-  border: 1px solid #C4F542 !important;
+  color: #4D7C0F !important;
+  border: 1px solid #4D7C0F !important;
 }
 .back-to-top:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 .watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
+
 </style>
 </head>
 <body>
@@ -809,7 +820,7 @@ tr:nth-child(even) {
     </div>
 
     <h2 style="color:var(--navy);text-align:center;margin:10px 0 4px;">Live List — WeeklyPayout With No Price Decay</h2>
-    <p style="text-align:center;color:#A1A1AA;font-size:0.9em;max-width:700px;margin:0 auto 10px;">Sorted by current dividend yield, highest first. Refreshes automatically from our live database.</p>
+    <p style="text-align:center;color:#5B6575;font-size:0.9em;max-width:700px;margin:0 auto 10px;">Sorted by current dividend yield, highest first. Refreshes automatically from our live database.</p>
 
     <table class="recap-table" id="decayTable" style="display:none">
         <thead>
@@ -898,7 +909,7 @@ tr:nth-child(even) {
     </div>
 
     <h2 style="color:var(--navy);text-align:center;margin:20px 0 6px;">📝 More From The WeeklyPayout.com Blog</h2>
-    <p style="text-align:center;color:#A1A1AA;font-size:0.9em;max-width:700px;margin:0 auto 10px;">More guides, rankings, and breakdowns to help you navigate the weekly dividend ETF space.</p>
+    <p style="text-align:center;color:#5B6575;font-size:0.9em;max-width:700px;margin:0 auto 10px;">More guides, rankings, and breakdowns to help you navigate the weekly dividend ETF space.</p>
     <div class="related-grid">
         <a href="/weekly-payout/top-20-highest-yield-weekly-etfs.html" class="related-card">
             <h4>🏆 Top 20 Highest Yielding WeeklyPayout</h4>
@@ -945,7 +956,7 @@ tr:nth-child(even) {
             <a href="https://vegasharesetfs.com/ODTE" target="_blank" rel="noopener noreferrer">
                 <img src="ODTE ad 728x90px.png" alt="ODTE Advertisement">
             </a>
-            <small style="color:#A1A1AA; font-size:1em; font-weight:900; letter-spacing:0.03em;">📢 Sponsored By ↑</small>
+            <small style="color:#5B6575; font-size:1em; font-weight:900; letter-spacing:0.03em;">📢 Sponsored By ↑</small>
         </div>
         <p>
             <a href="terms.html">Terms of Use</a> | 

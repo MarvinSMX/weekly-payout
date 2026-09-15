@@ -65,27 +65,27 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
-  /* Canonical tokens */
-  --bg: #09090B;
-  --surface: #121214;
-  --surface-2: #161618;
-  --ink: #F4F4F5;
-  --muted: #A1A1AA;
-  --line: #27272A;
-  --accent: #C4F542;
-  /* Extended / legacy aliases (same values) */
+  /* Canonical tokens — light theme */
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F5;
+  --ink: #111827;
+  --muted: #5B6575;
+  --line: #D8DEE8;
+  --accent: #4D7C0F;
+  /* Extended / legacy aliases */
   --ink-muted: var(--muted);
-  --ink-faint: #71717A;
+  --ink-faint: #8B95A5;
   --paper: var(--bg);
   --paper-2: var(--surface);
-  --line-strong: #3F3F46;
-  --header: #000000;
-  --header-ink: #FAFAFA;
-  --accent-soft: rgba(196, 245, 66, 0.12);
-  --accent-hover: #D9FF6B;
-  --on-accent: #000000;
-  --danger: #FF4D6A;
-  --pos: #C4F542;
+  --line-strong: #B8C0CE;
+  --header: #FFFFFF;
+  --header-ink: #111827;
+  --accent-soft: rgba(77, 124, 15, 0.10);
+  --accent-hover: #3F6212;
+  --on-accent: #FFFFFF;
+  --danger: #DC2626;
+  --pos: #4D7C0F;
   --shell: 94%;
   --shell-max: 1320px;
   --radius: 0;
@@ -93,18 +93,18 @@
   --font-display: "Syne", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   /* aliases for legacy site CSS */
-  --brand: var(--header);
-  --brand-dark: #000000;
-  --brand-mid: var(--surface);
-  --brand-lite: #1A1A1E;
+  --brand: var(--header-ink);
+  --brand-dark: #111827;
+  --brand-mid: var(--surface-2);
+  --brand-lite: #F8FAFC;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
-  --navy: var(--header);
+  --navy: var(--header-ink);
   --primary: var(--accent);
   --green: var(--accent);
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
-  --purple-deep: var(--header);
+  --purple-deep: var(--header-ink);
   --bg-primary: var(--bg);
   --bg-secondary: var(--surface);
   --bg-panel: var(--surface);
@@ -140,7 +140,7 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
 
-/* Wordmark header */
+/* Wordmark header — light */
 .nx-header, header.nx-header, body > header:not(.nx-skip) {
   width: 100%;
   background: var(--header);
@@ -166,7 +166,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.55);
+  color: var(--muted);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -182,7 +182,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--header-ink);
   background: transparent;
@@ -421,8 +421,8 @@ input[type="text"], select {
   overflow: hidden;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: var(--accent) !important;
+  background: var(--header-ink) !important;
+  color: #FFFFFF !important;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.68rem;
@@ -547,7 +547,7 @@ input[type="text"], select {
             --green: #27ae60;
             --text: #222;
             --muted: #666;
-            --bg: #09090B;
+            --bg: #F3F5F8;
             --white: #fff;
             --border: #dde5f0;
             --accent-blue: #0077cc;
@@ -677,7 +677,7 @@ input[type="text"], select {
         .intro-box p {
             font-size: 1.05em;
             line-height: 1.8;
-            color: #F4F4F5;
+            color: #111827;
         }
         .intro-box p + p { margin-top: 14px; }
         .intro-box strong { color: var(--navy); }
@@ -768,7 +768,7 @@ input[type="text"], select {
             width: 38px;
         }
         .rank-1 .rank-num { color: #c9971d; }
-        .rank-2 .rank-num { color: #71717A; }
+        .rank-2 .rank-num { color: #8B95A5; }
         .rank-3 .rank-num { color: #9c6b3b; }
         .symbol-cell {
             font-weight: 900;
@@ -858,7 +858,7 @@ input[type="text"], select {
         .article-body p {
             margin-bottom: 16px;
             font-size: 1.02em;
-            color: #F4F4F5;
+            color: #111827;
             line-height: 1.8;
         }
         .article-body strong { color: var(--navy); }
@@ -867,7 +867,7 @@ input[type="text"], select {
 
         /* ── CALLOUT BOX ── */
         .callout {
-            background: #1212148e1;
+            background: #FFFFFF8e1;
             border: 1px solid #f5c842;
             border-left: 5px solid var(--gold);
             border-radius: 8px;
@@ -889,7 +889,7 @@ input[type="text"], select {
         .callout-info strong { color: var(--navy); }
 
         .callout-danger {
-            background: #1212142f2;
+            background: #FFFFFF2f2;
             border: 1px solid #ffb3b3;
             border-left: 5px solid var(--red);
             border-radius: 8px;
@@ -925,7 +925,7 @@ input[type="text"], select {
             display: none;
             padding: 0 22px 18px;
             font-size: 0.97em;
-            color: #A1A1AA;
+            color: #5B6575;
             line-height: 1.75;
             border-top: 1px solid var(--border);
         }
@@ -973,12 +973,12 @@ input[type="text"], select {
         }
         .glossary h3 { font-family: 'Oswald', sans-serif; font-size: 1.2em; color: var(--navy); margin-bottom: 14px; }
         .glossary dl dt { font-weight: 900; color: var(--navy); margin-top: 12px; }
-        .glossary dl dd { color: #A1A1AA; font-size: 0.96em; margin: 2px 0 0 14px; }
+        .glossary dl dd { color: #5B6575; font-size: 0.96em; margin: 2px 0 0 14px; }
 
         /* ── DISCLAIMER ── */
         .disclaimer-box {
-            background: #fafafa;
-            border: 1px solid #27272A;
+            background: #111827;
+            border: 1px solid #D8DEE8;
             border-radius: 8px;
             padding: 18px 22px;
             margin: 40px 0 20px;
@@ -1038,7 +1038,7 @@ input[type="text"], select {
         .share-facebook { background: #1877f2; color: #fff; }
         .share-facebook:hover { background: #1666da; }
         .share-copy { background: var(--navy); color: #fff; cursor: pointer; border: none; font-family: 'Syne', sans-serif; }
-        .share-copy:hover { background: #09090B; }
+        .share-copy:hover { background: #F3F5F8; }
 
         @media (max-width: 600px) {
             .topbar-links a { display: none; }
@@ -1049,144 +1049,155 @@ input[type="text"], select {
         }
     
 
-/* Force dark network chrome */
+
+/* Force light network chrome */
 :root {
-  --bg: #09090B !important;
-  --surface: #121214 !important;
-  --ink: #F4F4F5 !important;
-  --muted: #A1A1AA !important;
-  --line: #27272A !important;
-  --accent: #C4F542 !important;
-  --paper: #09090B !important;
-  --paper-2: #121214 !important;
-  --ink-muted: #A1A1AA !important;
-  --text-primary: #F4F4F5 !important;
-  --text-secondary: #A1A1AA !important;
-  --bg-primary: #09090B !important;
-  --bg-secondary: #121214 !important;
-  --gold: #C4F542 !important;
+  --bg: #F3F5F8 !important;
+  --surface: #FFFFFF !important;
+  --surface-2: #EEF1F5 !important;
+  --ink: #111827 !important;
+  --muted: #5B6575 !important;
+  --line: #D8DEE8 !important;
+  --accent: #4D7C0F !important;
+  --paper: #F3F5F8 !important;
+  --paper-2: #FFFFFF !important;
+  --ink-muted: #5B6575 !important;
+  --ink-faint: #8B95A5 !important;
+  --header: #FFFFFF !important;
+  --header-ink: #111827 !important;
+  --text-primary: #111827 !important;
+  --text-secondary: #5B6575 !important;
+  --bg-primary: #F3F5F8 !important;
+  --bg-secondary: #FFFFFF !important;
+  --gold: #4D7C0F !important;
   --gold2: var(--accent-hover) !important;
-  --green: #C4F542 !important;
-  --primary: #C4F542 !important;
-  --navy: #000000 !important;
-  --brand: #000000 !important;
-  --light: #121214 !important;
+  --green: #4D7C0F !important;
+  --primary: #4D7C0F !important;
+  --navy: #111827 !important;
+  --brand: #111827 !important;
+  --light: #FFFFFF !important;
+  --on-accent: #FFFFFF !important;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 header, .nx-header {
-  background: var(--header) !important;
-  color: var(--header-ink) !important;
-  border-bottom: 2px solid #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-bottom: 2px solid #4D7C0F !important;
 }
-.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
-.logo span, .nx-logo span { color: #C4F542 !important; }
-.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
-.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.logo, .nx-logo, .logo-text { color: #111827 !important; }
+.logo span, .nx-logo span { color: #4D7C0F !important; }
+.logo-sub, .nx-tagline { color: #5B6575 !important; }
+.header-link, .nx-nav a {
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
+  background: transparent !important;
+}
 .header-link:hover, .nx-nav a:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .hero, .nx-hero, main > .hero, section.hero, .main-h1 {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 .hero h1, .nx-hero h1, section.hero h1, h1 {
-  color: var(--ink) !important;
+  color: #111827 !important;
 }
 .hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
 .site-network-label, .table-meta, .footer, footer {
-  color: var(--muted) !important;
+  color: #5B6575 !important;
 }
 .site-network-bar {
-  background: var(--surface) !important;
-  border-bottom: 1px solid var(--line) !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #D8DEE8 !important;
 }
 .site-pill {
   background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #111827 !important;
+  border: 1px solid #B8C0CE !important;
   border-radius: 0 !important;
 }
 .site-pill:hover {
-  background: var(--accent-soft) !important;
-  color: #C4F542 !important;
-  border-color: #C4F542 !important;
+  background: rgba(0,0,0,0.04) !important;
+  color: #4D7C0F !important;
+  border-color: #4D7C0F !important;
 }
 .site-pill.current {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .chip {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #4D7C0F !important;
 }
 .chip:hover, .chip.active {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 #filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
 input[type="text"], input[type="search"], select, textarea {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line-strong) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
 }
 #filters input::placeholder, input::placeholder {
-  color: var(--ink-faint) !important;
+  color: #8B95A5 !important;
 }
 #etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
-  background: var(--surface) !important;
-  border-color: var(--line) !important;
-  color: var(--ink) !important;
+  background: #FFFFFF !important;
+  border-color: #D8DEE8 !important;
+  color: #111827 !important;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: #C4F542 !important;
-  border-bottom-color: #C4F542 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #4D7C0F !important;
 }
 #etfTable td, table td {
-  color: var(--ink) !important;
-  border-bottom-color: var(--line) !important;
+  color: #111827 !important;
+  border-bottom-color: #D8DEE8 !important;
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
 tr:nth-child(even) {
-  background: #161618 !important;
+  background: #EEF1F5 !important;
 }
 #etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
-  background: var(--accent-soft) !important;
+  background: rgba(0,0,0,0.03) !important;
 }
 .symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
 .yield, .decay, td:before, .tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .footer a, footer a, a.tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .stat, .faq, .rel, .info-card, .card, .panel {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D8DEE8 !important;
 }
-.vote-count, #voteMsg { color: #C4F542 !important; }
+.vote-count, #voteMsg { color: #4D7C0F !important; }
 .back-to-top {
   background: transparent !important;
-  color: #C4F542 !important;
-  border: 1px solid #C4F542 !important;
+  color: #4D7C0F !important;
+  border: 1px solid #4D7C0F !important;
 }
 .back-to-top:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 .watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
+
 </style>
 </head>
 <body>
@@ -1541,7 +1552,7 @@ async function loadTop10() {
             tr.innerHTML = `
                 <td class="rank-num">${rank <= 3 ? medals[rank-1] : rank}</td>
                 <td class="symbol-cell">${cols[0] || '-'}</td>
-                <td style="text-align:left; font-size:0.9em; color:#A1A1AA;">${cols[1] || '-'}</td>
+                <td style="text-align:left; font-size:0.9em; color:#5B6575;">${cols[1] || '-'}</td>
                 <td class="yield-cell">${cols[2] || '-'}</td>
                 <td class="${decayClass}">${cols[3] || '-'}</td>
                 <td class="${totalReturnClass}">${totalReturnRaw}</td>

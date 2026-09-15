@@ -48,27 +48,27 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
-  /* Canonical tokens */
-  --bg: #09090B;
-  --surface: #121214;
-  --surface-2: #161618;
-  --ink: #F4F4F5;
-  --muted: #A1A1AA;
-  --line: #27272A;
-  --accent: #C4F542;
-  /* Extended / legacy aliases (same values) */
+  /* Canonical tokens — light theme */
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F5;
+  --ink: #111827;
+  --muted: #5B6575;
+  --line: #D8DEE8;
+  --accent: #4D7C0F;
+  /* Extended / legacy aliases */
   --ink-muted: var(--muted);
-  --ink-faint: #71717A;
+  --ink-faint: #8B95A5;
   --paper: var(--bg);
   --paper-2: var(--surface);
-  --line-strong: #3F3F46;
-  --header: #000000;
-  --header-ink: #FAFAFA;
-  --accent-soft: rgba(196, 245, 66, 0.12);
-  --accent-hover: #D9FF6B;
-  --on-accent: #000000;
-  --danger: #FF4D6A;
-  --pos: #C4F542;
+  --line-strong: #B8C0CE;
+  --header: #FFFFFF;
+  --header-ink: #111827;
+  --accent-soft: rgba(77, 124, 15, 0.10);
+  --accent-hover: #3F6212;
+  --on-accent: #FFFFFF;
+  --danger: #DC2626;
+  --pos: #4D7C0F;
   --shell: 94%;
   --shell-max: 1320px;
   --radius: 0;
@@ -76,18 +76,18 @@
   --font-display: "Syne", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   /* aliases for legacy site CSS */
-  --brand: var(--header);
-  --brand-dark: #000000;
-  --brand-mid: var(--surface);
-  --brand-lite: #1A1A1E;
+  --brand: var(--header-ink);
+  --brand-dark: #111827;
+  --brand-mid: var(--surface-2);
+  --brand-lite: #F8FAFC;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
-  --navy: var(--header);
+  --navy: var(--header-ink);
   --primary: var(--accent);
   --green: var(--accent);
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
-  --purple-deep: var(--header);
+  --purple-deep: var(--header-ink);
   --bg-primary: var(--bg);
   --bg-secondary: var(--surface);
   --bg-panel: var(--surface);
@@ -123,7 +123,7 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
 
-/* Wordmark header */
+/* Wordmark header — light */
 .nx-header, header.nx-header, body > header:not(.nx-skip) {
   width: 100%;
   background: var(--header);
@@ -149,7 +149,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.55);
+  color: var(--muted);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -165,7 +165,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--header-ink);
   background: transparent;
@@ -404,8 +404,8 @@ input[type="text"], select {
   overflow: hidden;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: var(--accent) !important;
+  background: var(--header-ink) !important;
+  color: #FFFFFF !important;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.68rem;
@@ -525,7 +525,7 @@ input[type="text"], select {
 :root {
   --navy:#000000; --navy-mid:#003366; --navy-light:#0a4a7c;
   --red:#e74c3c; --green:#27ae60; --gold:#f39c12;
-  --slate:#09090B; --white:#ffffff;
+  --slate:#F3F5F8; --white:#ffffff;
   --text:#222222; --muted:#666666;
   --mono:'DM Mono',monospace; --sans:'Syne',Arial,sans-serif;
 }
@@ -549,12 +549,12 @@ body { font-family:var(--sans); background:var(--slate); color:var(--text); over
 
 /* CONTROLS */
 .controls-row { max-width:520px; margin:0 auto; padding:0 20px; display:flex; justify-content:space-between; align-items:center; font-size:13px; margin-bottom:8px; }
-.ctrl-btn { padding:6px 16px; background:#121214; border:2px solid var(--navy); color:var(--navy); border-radius:999px; font-weight:700; font-size:12px; cursor:pointer; font-family:var(--sans); }
+.ctrl-btn { padding:6px 16px; background:#FFFFFF; border:2px solid var(--navy); color:var(--navy); border-radius:999px; font-weight:700; font-size:12px; cursor:pointer; font-family:var(--sans); }
 .ctrl-btn:hover { background:var(--navy); color:white; }
 
 /* SWIPE CONTAINER */
 .swipe-container { max-width:520px; margin:0 auto 4px; padding:0 20px; position:relative; min-height:520px; }
-.etf-card { position:absolute; inset:0; background:#121214; border-radius:24px; overflow:hidden; box-shadow:0 20px 60px -10px rgba(0,31,61,.22); display:flex; flex-direction:column; transition:all .42s cubic-bezier(0.34,1.56,0.64,1); border:3px solid var(--navy); }
+.etf-card { position:absolute; inset:0; background:#FFFFFF; border-radius:24px; overflow:hidden; box-shadow:0 20px 60px -10px rgba(0,31,61,.22); display:flex; flex-direction:column; transition:all .42s cubic-bezier(0.34,1.56,0.64,1); border:3px solid var(--navy); }
 .etf-card.swipe-left  { transform:translateX(-460px) rotate(-25deg) !important; opacity:0; }
 .etf-card.swipe-right { transform:translateX(460px)  rotate( 25deg) !important; opacity:0; }
 
@@ -564,21 +564,21 @@ body { font-family:var(--sans); background:var(--slate); color:var(--text); over
 .ticker-big { font-size:clamp(48px,11vw,68px); font-weight:900; font-family:var(--mono); letter-spacing:-4px; line-height:1; }
 .etf-name { font-size:17px; font-weight:700; margin-top:5px; opacity:.92; line-height:1.3; }
 
-.main-focus { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:14px; background:#121214; }
+.main-focus { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:14px; background:#FFFFFF; }
 .focus-box { background:#f0f4ff; border-radius:14px; padding:14px 10px; text-align:center; border:2px solid var(--navy); }
 .focus-box.yield { border-color:var(--green); background:#f0fdf4; }
 .focus-val { font-size:28px; font-weight:900; font-family:var(--mono); line-height:1; color:var(--navy); }
 .focus-box.yield .focus-val { color:var(--green); }
 .focus-label { font-size:10px; font-weight:900; color:var(--muted); text-transform:uppercase; letter-spacing:.7px; margin-top:4px; }
 
-.stats-bar { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; padding:12px 18px; background:#121214; border-bottom:1px solid #e2e8f0; }
+.stats-bar { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; padding:12px 18px; background:#FFFFFF; border-bottom:1px solid #e2e8f0; }
 .stat-box { text-align:center; }
 .stat-val { font-size:15px; font-weight:700; font-family:var(--mono); color:var(--navy); }
 .stat-val.positive { color:var(--green); }
 .stat-val.negative { color:var(--red); }
 .stat-lbl { font-size:9px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
 
-.card-info { flex:1; overflow:auto; padding:14px 18px 8px; background:#fafafa; }
+.card-info { flex:1; overflow:auto; padding:14px 18px 8px; background:#111827; }
 .info-row { display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px solid #e8ecf0; }
 .info-row:last-child { border-bottom:none; }
 .info-label { color:var(--muted); font-size:13px; }
@@ -589,7 +589,7 @@ body { font-family:var(--sans); background:var(--slate); color:var(--text); over
 /* ACTION BUTTONS */
 .actions { display:flex; justify-content:center; gap:40px; padding:10px 20px 20px; max-width:520px; margin:0 auto; }
 .action-btn { width:72px; height:72px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; box-shadow:0 8px 28px rgba(0,0,0,.18); transition:all .2s; border:4px solid white; cursor:pointer; }
-#noBtn  { background:#121214; color:var(--red); }
+#noBtn  { background:#FFFFFF; color:var(--red); }
 #yesBtn { background:var(--green); color:white; }
 #noBtn:hover  { transform:scale(1.1); box-shadow:0 12px 36px rgba(231,76,60,.3); }
 #yesBtn:hover { transform:scale(1.1); box-shadow:0 12px 36px rgba(39,174,96,.35); }
@@ -601,7 +601,7 @@ body { font-family:var(--sans); background:var(--slate); color:var(--text); over
 
 /* OFFER MODAL */
 #offerModal { position:fixed; inset:0; background:rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; z-index:700; }
-#offerContent { background:#121214; max-width:400px; width:92%; border-radius:20px; padding:30px 26px; text-align:center; border-top:4px solid var(--red); }
+#offerContent { background:#FFFFFF; max-width:400px; width:92%; border-radius:20px; padding:30px 26px; text-align:center; border-top:4px solid var(--red); }
 #offerContent h2 { font-size:20px; font-weight:900; color:var(--navy); margin-bottom:12px; }
 #offerContent p { font-size:14px; color:var(--muted); line-height:1.6; margin-bottom:24px; }
 .offer-btns { display:flex; gap:10px; }
@@ -611,14 +611,14 @@ body { font-family:var(--sans); background:var(--slate); color:var(--text); over
 .offer-no  { background:#e2e8f0; color:var(--text); }
 
 /* SAVED PANEL */
-#savedPanel { position:fixed; bottom:20px; right:20px; background:#121214; border-radius:18px; box-shadow:0 16px 50px -8px rgba(0,0,0,.28); width:330px; max-height:540px; overflow:hidden; z-index:500; display:none; border:2px solid var(--navy); }
+#savedPanel { position:fixed; bottom:20px; right:20px; background:#FFFFFF; border-radius:18px; box-shadow:0 16px 50px -8px rgba(0,0,0,.28); width:330px; max-height:540px; overflow:hidden; z-index:500; display:none; border:2px solid var(--navy); }
 .saved-panel-head { padding:14px 20px; background:var(--navy); color:white; display:flex; justify-content:space-between; align-items:center; font-weight:900; }
 .saved-panel-head span:last-child { cursor:pointer; font-size:22px; }
 #savedList { max-height:430px; overflow:auto; }
 
 /* DETAIL MODAL */
 #detailModal { position:fixed; inset:0; background:rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; z-index:600; }
-#detailInner { background:#121214; width:94%; max-width:500px; border-radius:20px; max-height:92vh; overflow:auto; border:3px solid var(--navy); }
+#detailInner { background:#FFFFFF; width:94%; max-width:500px; border-radius:20px; max-height:92vh; overflow:auto; border:3px solid var(--navy); }
 .detail-head { padding:22px 26px; background:var(--navy); color:white; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; }
 .detail-ticker { font-size:30px; font-family:var(--mono); font-weight:900; }
 .detail-close { font-size:28px; cursor:pointer; }
@@ -633,144 +633,155 @@ footer { text-align:center; padding:40px 20px; color:var(--muted); font-size:12p
 footer a { color:var(--navy); text-decoration:none; font-weight:700; margin:0 6px; }
 
 
-/* Force dark network chrome */
+
+/* Force light network chrome */
 :root {
-  --bg: #09090B !important;
-  --surface: #121214 !important;
-  --ink: #F4F4F5 !important;
-  --muted: #A1A1AA !important;
-  --line: #27272A !important;
-  --accent: #C4F542 !important;
-  --paper: #09090B !important;
-  --paper-2: #121214 !important;
-  --ink-muted: #A1A1AA !important;
-  --text-primary: #F4F4F5 !important;
-  --text-secondary: #A1A1AA !important;
-  --bg-primary: #09090B !important;
-  --bg-secondary: #121214 !important;
-  --gold: #C4F542 !important;
+  --bg: #F3F5F8 !important;
+  --surface: #FFFFFF !important;
+  --surface-2: #EEF1F5 !important;
+  --ink: #111827 !important;
+  --muted: #5B6575 !important;
+  --line: #D8DEE8 !important;
+  --accent: #4D7C0F !important;
+  --paper: #F3F5F8 !important;
+  --paper-2: #FFFFFF !important;
+  --ink-muted: #5B6575 !important;
+  --ink-faint: #8B95A5 !important;
+  --header: #FFFFFF !important;
+  --header-ink: #111827 !important;
+  --text-primary: #111827 !important;
+  --text-secondary: #5B6575 !important;
+  --bg-primary: #F3F5F8 !important;
+  --bg-secondary: #FFFFFF !important;
+  --gold: #4D7C0F !important;
   --gold2: var(--accent-hover) !important;
-  --green: #C4F542 !important;
-  --primary: #C4F542 !important;
-  --navy: #000000 !important;
-  --brand: #000000 !important;
-  --light: #121214 !important;
+  --green: #4D7C0F !important;
+  --primary: #4D7C0F !important;
+  --navy: #111827 !important;
+  --brand: #111827 !important;
+  --light: #FFFFFF !important;
+  --on-accent: #FFFFFF !important;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 header, .nx-header {
-  background: var(--header) !important;
-  color: var(--header-ink) !important;
-  border-bottom: 2px solid #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-bottom: 2px solid #4D7C0F !important;
 }
-.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
-.logo span, .nx-logo span { color: #C4F542 !important; }
-.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
-.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.logo, .nx-logo, .logo-text { color: #111827 !important; }
+.logo span, .nx-logo span { color: #4D7C0F !important; }
+.logo-sub, .nx-tagline { color: #5B6575 !important; }
+.header-link, .nx-nav a {
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
+  background: transparent !important;
+}
 .header-link:hover, .nx-nav a:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .hero, .nx-hero, main > .hero, section.hero, .main-h1 {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 .hero h1, .nx-hero h1, section.hero h1, h1 {
-  color: var(--ink) !important;
+  color: #111827 !important;
 }
 .hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
 .site-network-label, .table-meta, .footer, footer {
-  color: var(--muted) !important;
+  color: #5B6575 !important;
 }
 .site-network-bar {
-  background: var(--surface) !important;
-  border-bottom: 1px solid var(--line) !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #D8DEE8 !important;
 }
 .site-pill {
   background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #111827 !important;
+  border: 1px solid #B8C0CE !important;
   border-radius: 0 !important;
 }
 .site-pill:hover {
-  background: var(--accent-soft) !important;
-  color: #C4F542 !important;
-  border-color: #C4F542 !important;
+  background: rgba(0,0,0,0.04) !important;
+  color: #4D7C0F !important;
+  border-color: #4D7C0F !important;
 }
 .site-pill.current {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .chip {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #4D7C0F !important;
 }
 .chip:hover, .chip.active {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 #filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
 input[type="text"], input[type="search"], select, textarea {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line-strong) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
 }
 #filters input::placeholder, input::placeholder {
-  color: var(--ink-faint) !important;
+  color: #8B95A5 !important;
 }
 #etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
-  background: var(--surface) !important;
-  border-color: var(--line) !important;
-  color: var(--ink) !important;
+  background: #FFFFFF !important;
+  border-color: #D8DEE8 !important;
+  color: #111827 !important;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: #C4F542 !important;
-  border-bottom-color: #C4F542 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #4D7C0F !important;
 }
 #etfTable td, table td {
-  color: var(--ink) !important;
-  border-bottom-color: var(--line) !important;
+  color: #111827 !important;
+  border-bottom-color: #D8DEE8 !important;
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
 tr:nth-child(even) {
-  background: #161618 !important;
+  background: #EEF1F5 !important;
 }
 #etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
-  background: var(--accent-soft) !important;
+  background: rgba(0,0,0,0.03) !important;
 }
 .symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
 .yield, .decay, td:before, .tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .footer a, footer a, a.tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .stat, .faq, .rel, .info-card, .card, .panel {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D8DEE8 !important;
 }
-.vote-count, #voteMsg { color: #C4F542 !important; }
+.vote-count, #voteMsg { color: #4D7C0F !important; }
 .back-to-top {
   background: transparent !important;
-  color: #C4F542 !important;
-  border: 1px solid #C4F542 !important;
+  color: #4D7C0F !important;
+  border: 1px solid #4D7C0F !important;
 }
 .back-to-top:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 .watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
+
 </style>
 </head>
 <body>
@@ -911,7 +922,7 @@ async function loadETFs() {
     }
     resetDeck();
   } catch(e) {
-    document.getElementById('swipeContainer').innerHTML = '<div style="padding:60px 20px;text-align:center;color:#A1A1AA;font-size:16px;background:#121214;border-radius:24px;margin:0 20px">⚠️ Could not load ETF data. Please refresh.</div>';
+    document.getElementById('swipeContainer').innerHTML = '<div style="padding:60px 20px;text-align:center;color:#5B6575;font-size:16px;background:#FFFFFF;border-radius:24px;margin:0 20px">⚠️ Could not load ETF data. Please refresh.</div>';
   }
 }
 
@@ -933,10 +944,10 @@ function renderCard() {
 
   if (currentIndex >= deck.length) {
     container.innerHTML = `
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#121214;border-radius:24px;border:3px solid #000000;text-align:center;padding:40px">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#FFFFFF;border-radius:24px;border:3px solid #000000;text-align:center;padding:40px">
         <div style="font-size:52px;margin-bottom:16px">🎉</div>
         <h2 style="font-size:28px;color:#000000;margin-bottom:12px">All done!</h2>
-        <p style="color:#A1A1AA;margin-bottom:28px">You've seen the whole deck. Shuffle for a fresh round.</p>
+        <p style="color:#5B6575;margin-bottom:28px">You've seen the whole deck. Shuffle for a fresh round.</p>
         <button onclick="shuffleDeck()" style="padding:14px 36px;background:#000000;color:white;border:none;border-radius:999px;font-size:16px;font-weight:900;cursor:pointer;font-family:'Syne',sans-serif">🔀 New Deck</button>
       </div>`;
     return;
@@ -1078,7 +1089,7 @@ function showSaved() {
   const list = document.getElementById('savedList');
   list.innerHTML = '';
   if (!savedETFs.length) {
-    list.innerHTML = '<div style="padding:50px 20px;text-align:center;color:#A1A1AA">No saves yet.<br>Swipe right ❤️ on ETFs you like!</div>';
+    list.innerHTML = '<div style="padding:50px 20px;text-align:center;color:#5B6575">No saves yet.<br>Swipe right ❤️ on ETFs you like!</div>';
   } else {
     savedETFs.forEach((etf, i) => {
       const div = document.createElement('div');
@@ -1087,7 +1098,7 @@ function showSaved() {
         <div onclick="showDetail('${etf.symbol}')">
           <strong style="font-size:16px;color:#000000;font-family:'DM Mono',monospace">${etf.symbol}</strong>
           <span style="font-size:13px;color:#27ae60;font-weight:700;margin-left:8px">${etf.yieldStr}</span>
-          <div style="font-size:12px;color:#A1A1AA;margin-top:2px">${(etf.name||'').slice(0,34)}</div>
+          <div style="font-size:12px;color:#5B6575;margin-top:2px">${(etf.name||'').slice(0,34)}</div>
         </div>
         <span onclick="removeSaved(${i},event)" style="color:#e74c3c;font-size:20px;padding:4px 8px;cursor:pointer">✕</span>
       `;
@@ -1125,10 +1136,10 @@ function showDetail(symbol) {
       </div>
       <div style="background:#f0f4ff;padding:18px;border-radius:14px;text-align:center;border:2px solid #000000">
         <div style="font-size:38px;font-weight:900;font-family:'DM Mono',monospace" class="${retClass}">${etf.totalReturn || '—'}</div>
-        <div style="font-size:11px;color:#A1A1AA;font-weight:700;text-transform:uppercase;margin-top:4px">Total Return</div>
+        <div style="font-size:11px;color:#5B6575;font-weight:700;text-transform:uppercase;margin-top:4px">Total Return</div>
       </div>
     </div>
-    <div style="background:#121214;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:20px">
+    <div style="background:#FFFFFF;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-bottom:20px">
       <div class="info-row"><span class="info-label">Ticker</span><span class="info-value">${etf.symbol}</span></div>
       <div class="info-row"><span class="info-label">Dividend Yield</span><span class="info-value" style="color:#27ae60">${etf.yieldStr}</span></div>
       <div class="info-row"><span class="info-label">Price Decay</span><span class="info-value ${decayClass}">${etf.decay || '—'}</span></div>
@@ -1137,7 +1148,7 @@ function showDetail(symbol) {
     </div>
     <div style="display:flex;gap:10px">
       <button onclick="saveFromDetail('${etf.symbol}');closeDetail()" style="flex:1;padding:16px;background:#27ae60;color:white;border:none;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer;font-family:'Syne',sans-serif">❤️ Save to Watchlist</button>
-      <button onclick="closeDetail()" style="flex:1;padding:16px;background:#e2e8f0;color:#F4F4F5;border:none;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer;font-family:'Syne',sans-serif">Close</button>
+      <button onclick="closeDetail()" style="flex:1;padding:16px;background:#e2e8f0;color:#111827;border:none;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer;font-family:'Syne',sans-serif">Close</button>
     </div>
   `;
   document.getElementById('detailModal').style.display = 'flex';
@@ -1175,19 +1186,19 @@ window.onload = loadETFs;
 <!-- STATIC SEO CONTENT: Googlebot reads this; real users see the swipe game above -->
 <section id="seoContent" style="max-width:860px;margin:40px auto;padding:0 24px 10px">
   <h2 style="font-size:24px;font-weight:900;color:#000000;margin-bottom:12px">Swipe Weekly Dividend ETFs — Build Your Watchlist Free</h2>
-  <p style="font-size:15px;line-height:1.8;color:#A1A1AA;margin-bottom:16px">
+  <p style="font-size:15px;line-height:1.8;color:#5B6575;margin-bottom:16px">
     WeeklyPayout.com's interactive swipe tool lets you browse 100+ of the best <strong>weekly dividend ETFs</strong> one by one.
     Swipe right to save any ETF you like to your personal watchlist, or swipe left to skip. It's the fastest way to discover
     high-yield weekly income ETFs ranked by dividend yield, total return, and price decay.
   </p>
   <h3 style="font-size:18px;font-weight:900;color:#000000;margin-bottom:10px">What Are Weekly Dividend ETFs?</h3>
-  <p style="font-size:15px;line-height:1.8;color:#A1A1AA;margin-bottom:16px">
+  <p style="font-size:15px;line-height:1.8;color:#5B6575;margin-bottom:16px">
     Weekly dividend ETFs are exchange-traded funds that pay dividends to shareholders every week rather than monthly or quarterly.
     They are popular with income investors who want regular, frequent cash flow. Many weekly ETFs use options strategies such as
     covered calls to generate elevated yields, which can range from 10% to over 100% annually.
   </p>
   <h3 style="font-size:18px;font-weight:900;color:#000000;margin-bottom:10px">How to Use This Tool</h3>
-  <ul style="font-size:15px;line-height:2;color:#A1A1AA;margin-bottom:16px;padding-left:20px">
+  <ul style="font-size:15px;line-height:2;color:#5B6575;margin-bottom:16px;padding-left:20px">
     <li>Each card shows a weekly ETF's <strong>dividend yield</strong>, <strong>total return</strong>, and <strong>price decay</strong>.</li>
     <li>Click <strong>❤️ Yes</strong> to save an ETF to your watchlist. Click <strong>✕ No</strong> to skip to the next ETF.</li>
     <li>Double-tap any card to see full details for that ETF.</li>
@@ -1195,12 +1206,12 @@ window.onload = loadETFs;
     <li>Use keyboard arrow keys to swipe on desktop.</li>
   </ul>
   <h3 style="font-size:18px;font-weight:900;color:#000000;margin-bottom:10px">Key Metrics Explained</h3>
-  <ul style="font-size:15px;line-height:2;color:#A1A1AA;margin-bottom:16px;padding-left:20px">
+  <ul style="font-size:15px;line-height:2;color:#5B6575;margin-bottom:16px;padding-left:20px">
     <li><strong>Dividend Yield:</strong> The annualized income percentage paid out relative to the ETF's share price.</li>
     <li><strong>Price Decay:</strong> Whether the ETF's share price has declined since inception. "No" means no decay — a positive sign.</li>
     <li><strong>Total Return:</strong> Performance including both price change and dividends reinvested since inception.</li>
   </ul>
-  <p style="font-size:13px;color:#71717A;line-height:1.7">
+  <p style="font-size:13px;color:#8B95A5;line-height:1.7">
     <strong>Disclaimer:</strong> This tool is for entertainment and educational purposes only. ETF data is sourced from public information
     and updated daily but may not be 100% accurate. Nothing on this page is a buy or sell signal.
     Always consult a licensed financial advisor before making investment decisions. |
@@ -1208,7 +1219,7 @@ window.onload = loadETFs;
   </p>
 </section>
 
-<footer style="text-align:center;padding:40px 20px;color:#A1A1AA;font-size:12px;border-top:1px solid #e2e8f0;margin-top:10px">
+<footer style="text-align:center;padding:40px 20px;color:#5B6575;font-size:12px;border-top:1px solid #e2e8f0;margin-top:10px">
   <a href="https://marvinsmx.github.io/weekly-payout/" style="color:#000000;font-weight:700;text-decoration:none;margin:0 6px">WeeklyPayout.com</a> |
   <a href="https://marvinsmx.github.io/weekly-payout/terms.html" style="color:#000000;font-weight:700;text-decoration:none;margin:0 6px">Terms</a> |
   <a href="https://marvinsmx.github.io/weekly-payout/privacy.html" style="color:#000000;font-weight:700;text-decoration:none;margin:0 6px">Privacy</a> |

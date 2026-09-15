@@ -19,27 +19,27 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
-  /* Canonical tokens */
-  --bg: #09090B;
-  --surface: #121214;
-  --surface-2: #161618;
-  --ink: #F4F4F5;
-  --muted: #A1A1AA;
-  --line: #27272A;
-  --accent: #C4F542;
-  /* Extended / legacy aliases (same values) */
+  /* Canonical tokens — light theme */
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F5;
+  --ink: #111827;
+  --muted: #5B6575;
+  --line: #D8DEE8;
+  --accent: #4D7C0F;
+  /* Extended / legacy aliases */
   --ink-muted: var(--muted);
-  --ink-faint: #71717A;
+  --ink-faint: #8B95A5;
   --paper: var(--bg);
   --paper-2: var(--surface);
-  --line-strong: #3F3F46;
-  --header: #000000;
-  --header-ink: #FAFAFA;
-  --accent-soft: rgba(196, 245, 66, 0.12);
-  --accent-hover: #D9FF6B;
-  --on-accent: #000000;
-  --danger: #FF4D6A;
-  --pos: #C4F542;
+  --line-strong: #B8C0CE;
+  --header: #FFFFFF;
+  --header-ink: #111827;
+  --accent-soft: rgba(77, 124, 15, 0.10);
+  --accent-hover: #3F6212;
+  --on-accent: #FFFFFF;
+  --danger: #DC2626;
+  --pos: #4D7C0F;
   --shell: 94%;
   --shell-max: 1320px;
   --radius: 0;
@@ -47,18 +47,18 @@
   --font-display: "Syne", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   /* aliases for legacy site CSS */
-  --brand: var(--header);
-  --brand-dark: #000000;
-  --brand-mid: var(--surface);
-  --brand-lite: #1A1A1E;
+  --brand: var(--header-ink);
+  --brand-dark: #111827;
+  --brand-mid: var(--surface-2);
+  --brand-lite: #F8FAFC;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
-  --navy: var(--header);
+  --navy: var(--header-ink);
   --primary: var(--accent);
   --green: var(--accent);
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
-  --purple-deep: var(--header);
+  --purple-deep: var(--header-ink);
   --bg-primary: var(--bg);
   --bg-secondary: var(--surface);
   --bg-panel: var(--surface);
@@ -94,7 +94,7 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
 
-/* Wordmark header */
+/* Wordmark header — light */
 .nx-header, header.nx-header, body > header:not(.nx-skip) {
   width: 100%;
   background: var(--header);
@@ -120,7 +120,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.55);
+  color: var(--muted);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -136,7 +136,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--header-ink);
   background: transparent;
@@ -375,8 +375,8 @@ input[type="text"], select {
   overflow: hidden;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: var(--accent) !important;
+  background: var(--header-ink) !important;
+  color: #FFFFFF !important;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.68rem;
@@ -496,48 +496,48 @@ input[type="text"], select {
 html,body{margin:0;padding:0;overflow-x:hidden;width:100%}
 :root{--navy:#000000;--red:#e74c3c;--green:#27ae60}
 *{box-sizing:border-box}
-body{font-family:'Syne',Arial,sans-serif;background:#09090B;color:#F4F4F5;line-height:1.65;font-size:17px}
+body{font-family:'Syne',Arial,sans-serif;background:#F3F5F8;color:#111827;line-height:1.65;font-size:17px}
 a{color:var(--navy);text-decoration:none}a:hover{text-decoration:underline}
 header.site{background:var(--navy);padding:8px 20px;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.3);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;position:sticky;top:0;z-index:10}
 .banner-img{max-width:440px;width:82%;height:auto;display:block;margin:0 auto}
-.site-network-bar{width:100%;background:#121214;border-bottom:1px solid #27272A;padding:8px 0}
+.site-network-bar{width:100%;background:#FFFFFF;border-bottom:1px solid #D8DEE8;padding:8px 0}
 .site-network-track{max-width:1100px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .site-network-track::-webkit-scrollbar{display:none}
-.site-network-label{font-size:.68em;text-transform:uppercase;letter-spacing:.5px;color:#71717A;font-weight:900;flex-shrink:0;margin-right:2px}
-.site-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid var(--navy);background:#121214;color:var(--navy);font-size:.8em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s,color .15s}
+.site-network-label{font-size:.68em;text-transform:uppercase;letter-spacing:.5px;color:#8B95A5;font-weight:900;flex-shrink:0;margin-right:2px}
+.site-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid var(--navy);background:#FFFFFF;color:var(--navy);font-size:.8em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s,color .15s}
 .site-pill:hover{background:var(--navy);color:#fff;text-decoration:none}
 .site-pill.current{background:var(--navy);color:#fff;cursor:default}
 .wrap{max-width:900px;margin:0 auto;padding:0 15px}
 .crumbs{font-size:.85em;color:#777;padding:20px 0 0}
 .crumbs a{color:#777}.crumbs a:hover{color:var(--navy)}
 h1{font-size:1.7em;color:var(--navy);font-weight:900;line-height:1.3;margin:14px 0 4px;text-align:center}
-.sub{color:#A1A1AA;font-size:.95em;margin-bottom:24px;text-align:center}
+.sub{color:#5B6575;font-size:.95em;margin-bottom:24px;text-align:center}
 .sub .upd{color:var(--red);font-weight:900}
 .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
-.stat{background:#121214;border:3px solid var(--navy);border-radius:8px;padding:20px 22px;box-shadow:0 4px 15px rgba(0,0,0,.12);text-align:center}
+.stat{background:#FFFFFF;border:3px solid var(--navy);border-radius:8px;padding:20px 22px;box-shadow:0 4px 15px rgba(0,0,0,.12);text-align:center}
 .stat .lab{font-size:.72em;letter-spacing:.08em;text-transform:uppercase;color:#777;font-weight:900}
 .stat .val{font-size:clamp(30px,6vw,42px);font-weight:900;margin-top:6px}
 .stat .val.yld{color:var(--navy)}
 .stat .val.pos{color:var(--green)}.stat .val.neg{color:var(--red)}
 .stat .note{font-size:.8em;color:#777;margin-top:4px}
 h2{font-size:1.25em;color:var(--navy);font-weight:900;margin:36px 0 14px}
-table.ret{width:100%;border-collapse:collapse;background:#121214;border:3px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+table.ret{width:100%;border-collapse:collapse;background:#FFFFFF;border:3px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.12)}
 table.ret th{background:var(--navy);color:#fff;padding:12px 10px;font-size:.85em;text-align:left}
 table.ret td{padding:12px 10px;font-size:.95em;border-bottom:1px solid #eee}
-table.ret tr:nth-child(even){background:#161618}
+table.ret tr:nth-child(even){background:#EEF1F5}
 td.num{font-weight:900;text-align:right}
 td.pos,.positive{color:var(--green);font-weight:bold}td.neg,.negative{color:var(--red);font-weight:bold}
 .bar{height:6px;border-radius:3px;background:#e8e8e8;position:relative;min-width:120px}
 .bar i{position:absolute;top:0;height:6px;border-radius:3px;display:block}
-p.body{margin:0 0 16px;color:#F4F4F5}
-.faq{background:#121214;border:3px solid var(--navy);border-radius:8px;padding:6px 22px;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+p.body{margin:0 0 16px;color:#111827}
+.faq{background:#FFFFFF;border:3px solid var(--navy);border-radius:8px;padding:6px 22px;box-shadow:0 4px 15px rgba(0,0,0,.12)}
 .faq h3{font-size:1em;margin:18px 0 6px;color:var(--navy);font-weight:900}
-.faq p{margin:0 0 16px;font-size:.93em;color:#A1A1AA}
+.faq p{margin:0 0 16px;font-size:.93em;color:#5B6575}
 .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
-.rel{background:#121214;border:1px solid var(--navy);border-radius:8px;padding:14px 16px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .2s}
+.rel{background:#FFFFFF;border:1px solid var(--navy);border-radius:8px;padding:14px 16px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .2s}
 .rel:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.15)}
 .rel b{color:var(--navy);font-size:1.15em;font-weight:900}
-.rel span{display:block;font-size:.8em;color:#A1A1AA;margin-top:2px}
+.rel span{display:block;font-size:.8em;color:#5B6575;margin-top:2px}
 .rel .y{color:var(--navy);font-weight:900;font-size:.9em;margin-top:6px;display:block}
 .pro-cta{margin:40px 0;background:linear-gradient(135deg,var(--navy) 0%,#003a63 100%);border-radius:14px;padding:30px 28px;box-shadow:0 8px 24px rgba(0,31,61,.25);position:relative;overflow:hidden}
 .pro-cta::before{content:"";position:absolute;top:-40%;right:-10%;width:260px;height:260px;background:radial-gradient(circle,rgba(212,175,55,.18) 0%,transparent 70%);pointer-events:none}
@@ -553,157 +553,167 @@ p.body{margin:0 0 16px;color:#F4F4F5}
 .pro-btn:hover{background:#e8c04a;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.35);text-decoration:none}
 .pro-btn .arrow{transition:transform .2s}
 .pro-btn:hover .arrow{transform:translateX(3px)}
-.disc{font-size:.82em;color:#A1A1AA;margin:44px auto 30px;max-width:900px;line-height:1.55;text-align:center}
-footer.site{margin-top:40px;padding:25px 15px;background:#121214;width:100%;text-align:center;font-size:.9em;color:#A1A1AA;border-top:1px solid #27272A}
+.disc{font-size:.82em;color:#5B6575;margin:44px auto 30px;max-width:900px;line-height:1.55;text-align:center}
+footer.site{margin-top:40px;padding:25px 15px;background:#FFFFFF;width:100%;text-align:center;font-size:.9em;color:#5B6575;border-top:1px solid #D8DEE8}
 footer.site a{color:var(--navy);text-decoration:none;margin:0 12px;font-weight:700}
 footer.site a:hover{text-decoration:underline}
-footer.site .fine{margin-top:14px;font-size:.85em;color:#71717A}
-table.hublist{width:100%;border-collapse:collapse;background:#121214;border:3px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+footer.site .fine{margin-top:14px;font-size:.85em;color:#8B95A5}
+table.hublist{width:100%;border-collapse:collapse;background:#FFFFFF;border:3px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.12)}
 table.hublist th{background:var(--navy);color:#fff;padding:12px 10px;font-size:.85em;text-align:left}
 table.hublist td{padding:11px 10px;font-size:.95em;border-bottom:1px solid #eee}
-table.hublist tr:nth-child(even){background:#161618}
+table.hublist tr:nth-child(even){background:#EEF1F5}
 table.hublist tr:hover{background:rgba(255,255,255,0.04)}
 table.hublist td.num{font-weight:900;text-align:right}
 table.hublist a{font-weight:900;color:var(--navy);font-size:1.05em}
 @media(max-width:640px){.hero{grid-template-columns:1fr}h1{font-size:1.35em}}
 
-/* Force dark network chrome */
+
+/* Force light network chrome */
 :root {
-  --bg: #09090B !important;
-  --surface: #121214 !important;
-  --ink: #F4F4F5 !important;
-  --muted: #A1A1AA !important;
-  --line: #27272A !important;
-  --accent: #C4F542 !important;
-  --paper: #09090B !important;
-  --paper-2: #121214 !important;
-  --ink-muted: #A1A1AA !important;
-  --text-primary: #F4F4F5 !important;
-  --text-secondary: #A1A1AA !important;
-  --bg-primary: #09090B !important;
-  --bg-secondary: #121214 !important;
-  --gold: #C4F542 !important;
+  --bg: #F3F5F8 !important;
+  --surface: #FFFFFF !important;
+  --surface-2: #EEF1F5 !important;
+  --ink: #111827 !important;
+  --muted: #5B6575 !important;
+  --line: #D8DEE8 !important;
+  --accent: #4D7C0F !important;
+  --paper: #F3F5F8 !important;
+  --paper-2: #FFFFFF !important;
+  --ink-muted: #5B6575 !important;
+  --ink-faint: #8B95A5 !important;
+  --header: #FFFFFF !important;
+  --header-ink: #111827 !important;
+  --text-primary: #111827 !important;
+  --text-secondary: #5B6575 !important;
+  --bg-primary: #F3F5F8 !important;
+  --bg-secondary: #FFFFFF !important;
+  --gold: #4D7C0F !important;
   --gold2: var(--accent-hover) !important;
-  --green: #C4F542 !important;
-  --primary: #C4F542 !important;
-  --navy: #000000 !important;
-  --brand: #000000 !important;
-  --light: #121214 !important;
+  --green: #4D7C0F !important;
+  --primary: #4D7C0F !important;
+  --navy: #111827 !important;
+  --brand: #111827 !important;
+  --light: #FFFFFF !important;
+  --on-accent: #FFFFFF !important;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 header, .nx-header {
-  background: var(--header) !important;
-  color: var(--header-ink) !important;
-  border-bottom: 2px solid #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-bottom: 2px solid #4D7C0F !important;
 }
-.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
-.logo span, .nx-logo span { color: #C4F542 !important; }
-.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
-.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.logo, .nx-logo, .logo-text { color: #111827 !important; }
+.logo span, .nx-logo span { color: #4D7C0F !important; }
+.logo-sub, .nx-tagline { color: #5B6575 !important; }
+.header-link, .nx-nav a {
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
+  background: transparent !important;
+}
 .header-link:hover, .nx-nav a:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .hero, .nx-hero, main > .hero, section.hero, .main-h1 {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 .hero h1, .nx-hero h1, section.hero h1, h1 {
-  color: var(--ink) !important;
+  color: #111827 !important;
 }
 .hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
 .site-network-label, .table-meta, .footer, footer {
-  color: var(--muted) !important;
+  color: #5B6575 !important;
 }
 .site-network-bar {
-  background: var(--surface) !important;
-  border-bottom: 1px solid var(--line) !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #D8DEE8 !important;
 }
 .site-pill {
   background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #111827 !important;
+  border: 1px solid #B8C0CE !important;
   border-radius: 0 !important;
 }
 .site-pill:hover {
-  background: var(--accent-soft) !important;
-  color: #C4F542 !important;
-  border-color: #C4F542 !important;
+  background: rgba(0,0,0,0.04) !important;
+  color: #4D7C0F !important;
+  border-color: #4D7C0F !important;
 }
 .site-pill.current {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 .chip {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: #C4F542 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #4D7C0F !important;
 }
 .chip:hover, .chip.active {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 #filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
 input[type="text"], input[type="search"], select, textarea {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line-strong) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
 }
 #filters input::placeholder, input::placeholder {
-  color: var(--ink-faint) !important;
+  color: #8B95A5 !important;
 }
 #etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
-  background: var(--surface) !important;
-  border-color: var(--line) !important;
-  color: var(--ink) !important;
+  background: #FFFFFF !important;
+  border-color: #D8DEE8 !important;
+  color: #111827 !important;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: #C4F542 !important;
-  border-bottom-color: #C4F542 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #4D7C0F !important;
 }
 #etfTable td, table td {
-  color: var(--ink) !important;
-  border-bottom-color: var(--line) !important;
+  color: #111827 !important;
+  border-bottom-color: #D8DEE8 !important;
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
 tr:nth-child(even) {
-  background: #161618 !important;
+  background: #EEF1F5 !important;
 }
 #etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
-  background: var(--accent-soft) !important;
+  background: rgba(0,0,0,0.03) !important;
 }
 .symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
 .yield, .decay, td:before, .tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .footer a, footer a, a.tracker-link {
-  color: #C4F542 !important;
+  color: #4D7C0F !important;
 }
 .stat, .faq, .rel, .info-card, .card, .panel {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D8DEE8 !important;
 }
-.vote-count, #voteMsg { color: #C4F542 !important; }
+.vote-count, #voteMsg { color: #4D7C0F !important; }
 .back-to-top {
   background: transparent !important;
-  color: #C4F542 !important;
-  border: 1px solid #C4F542 !important;
+  color: #4D7C0F !important;
+  border: 1px solid #4D7C0F !important;
 }
 .back-to-top:hover {
-  background: #C4F542 !important;
-  color: #000 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
 }
 .watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
-  background: #C4F542 !important;
-  color: #000 !important;
-  border-color: #C4F542 !important;
+  background: #4D7C0F !important;
+  color: #FFFFFF !important;
+  border-color: #4D7C0F !important;
 }
 
 </style>
@@ -733,6 +743,6 @@ tr:nth-child(even) {
 <table class="hublist"><thead><tr><th>Ticker</th><th>Fund</th><th style="text-align:right">Yield</th><th style="text-align:center">Price Decay</th><th style="text-align:right">Return Since Inception</th></tr></thead><tbody><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/mstw-yield-and-total-returns.html">MSTW</a></td><td>Roundhill MSTR WeeklyPay ETF</td><td class="num" style="color:var(--navy)">117.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-79.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/hooy-yield-and-total-returns.html">HOOY</a></td><td>YieldMax® HOOD Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">101.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">65.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/msty-yield-and-total-returns.html">MSTY</a></td><td>YieldMax® MSTR Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">101.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">56.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/smcy-yield-and-total-returns.html">SMCY</a></td><td>YieldMax® SMCI Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">101.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-37.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/crco-yield-and-total-returns.html">CRCO</a></td><td>YieldMax® CRCL Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">100.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-25.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/mrny-yield-and-total-returns.html">MRNY</a></td><td>YieldMax® MRNA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">100.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">33.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/hoow-yield-and-total-returns.html">HOOW</a></td><td>Roundhill HOOD WeeklyPay ETF</td><td class="num" style="color:var(--navy)">97.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">36.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/coiw-yield-and-total-returns.html">COIW</a></td><td>Roundhill COIN WeeklyPay ETF</td><td class="num" style="color:var(--navy)">86.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-42.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/cony-yield-and-total-returns.html">CONY</a></td><td>YieldMax® COIN Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">85.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">45.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/maro-yield-and-total-returns.html">MARO</a></td><td>YieldMax® MARA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">85.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-57.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/armw-yield-and-total-returns.html">ARMW</a></td><td>Roundhill ARM WeeklyPay ETF</td><td class="num" style="color:var(--navy)">82.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">36.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/rbly-yield-and-total-returns.html">RBLY</a></td><td>YieldMax® RBLX Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">80.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-56.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/aiyy-yield-and-total-returns.html">AIYY</a></td><td>YieldMax® AI Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">76.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-75.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/hiyy-yield-and-total-returns.html">HIYY</a></td><td>YieldMax® HIMS Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">76.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-45.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ybit-yield-and-total-returns.html">YBIT</a></td><td>YieldMax® Bitcoin Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">76.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-13.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/inyy-yield-and-total-returns.html">INYY</a></td><td>YieldMax INTC Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">75.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-13.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/hoyy-yield-and-total-returns.html">HOYY</a></td><td>GraniteShares YieldBOOST HOOD ETF</td><td class="num" style="color:var(--navy)">73.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-45.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/smyy-yield-and-total-returns.html">SMYY</a></td><td>GraniteShares YieldBOOST SMCI ETF</td><td class="num" style="color:var(--navy)">71.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-31.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/amyy-yield-and-total-returns.html">AMYY</a></td><td>GraniteShares YieldBOOST AMD ETF</td><td class="num" style="color:var(--navy)">68.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">28.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ulti-yield-and-total-returns.html">ULTI</a></td><td>REX IncomeMax Option Strategy ETF</td><td class="num" style="color:var(--navy)">67.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-54.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/wntr-yield-and-total-returns.html">WNTR</a></td><td>YieldMax® Short MSTR Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">66.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">23.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/cvny-yield-and-total-returns.html">CVNY</a></td><td>YieldMax® CVNA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">65.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">37.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/coyy-yield-and-total-returns.html">COYY</a></td><td>GraniteShares YieldBOOST COIN ETF</td><td class="num" style="color:var(--navy)">63.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-59.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/snoy-yield-and-total-returns.html">SNOY</a></td><td>YieldMax® SNOW Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">61.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">134.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ulty-yield-and-total-returns.html">ULTY</a></td><td>YieldMax® Ultra Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">61.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">7.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/chpy-yield-and-total-returns.html">CHPY</a></td><td>YieldMax® Semiconductor Portfolio Option Income ETF</td><td class="num" style="color:var(--navy)">60.00%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">150.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/amdw-yield-and-total-returns.html">AMDW</a></td><td>Roundhill AMD WeeklyPay ETF</td><td class="num" style="color:var(--navy)">57.00%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">240.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/nvdw-yield-and-total-returns.html">NVDW</a></td><td>Roundhill NVDA WeeklyPay ETF</td><td class="num" style="color:var(--navy)">55.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">48.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/gdxy-yield-and-total-returns.html">GDXY</a></td><td>YieldMax® Gold Miners Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">55.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">65.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/rdyy-yield-and-total-returns.html">RDYY</a></td><td>YieldMax® RDDT Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">55.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-30.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/slty-yield-and-total-returns.html">SLTY</a></td><td>YieldMax® Ultra Short Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">55.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-18.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ybty-yield-and-total-returns.html">YBTY</a></td><td>GraniteShares YieldBOOST TopYielders ETF</td><td class="num" style="color:var(--navy)">52.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-31.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/metw-yield-and-total-returns.html">METW</a></td><td>Roundhill META WeeklyPay ETF</td><td class="num" style="color:var(--navy)">52.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-12.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tsly-yield-and-total-returns.html">TSLY</a></td><td>YieldMax® TSLA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">51.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">31.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/usoy-yield-and-total-returns.html">USOY</a></td><td>Defiance Oil Enhanced Options Income ETF</td><td class="num" style="color:var(--navy)">50.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">69.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/fiat-yield-and-total-returns.html">FIAT</a></td><td>YieldMax® Short COIN Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">50.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-49.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tsii-yield-and-total-returns.html">TSII</a></td><td>REX TSLA Growth And Income ETF</td><td class="num" style="color:var(--navy)">46.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">10.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/amdy-yield-and-total-returns.html">AMDY</a></td><td>YieldMax® AMD Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">46.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">210.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tslw-yield-and-total-returns.html">TSLW</a></td><td>Roundhill TSLA WeeklyPay ETF</td><td class="num" style="color:var(--navy)">45.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-12.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ybst-yield-and-total-returns.html">YBST</a></td><td>GraniteShares YieldBOOST Single Stock Universe ETF</td><td class="num" style="color:var(--navy)">44.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-25.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tsyy-yield-and-total-returns.html">TSYY</a></td><td>GraniteShares YieldBOOST TSLA ETF</td><td class="num" style="color:var(--navy)">44.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-32.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/cepi-yield-and-total-returns.html">CEPI</a></td><td>REX Crypto Equity Premium Income ETF</td><td class="num" style="color:var(--navy)">42.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">23.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/crsh-yield-and-total-returns.html">CRSH</a></td><td>YieldMax® Short TSLA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">41.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-53.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/qldy-yield-and-total-returns.html">QLDY</a></td><td>Defiance Nasdaq 100 LightningSpread Income ETF</td><td class="num" style="color:var(--navy)">40.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">16.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/pltw-yield-and-total-returns.html">PLTW</a></td><td>Roundhill PLTR WeeklyPay ETF</td><td class="num" style="color:var(--navy)">40.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">43.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/nvdy-yield-and-total-returns.html">NVDY</a></td><td>YieldMax® NVDA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">40.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">337.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/plty-yield-and-total-returns.html">PLTY</a></td><td>YieldMax® PLTR Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">40.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">178.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/lfgy-yield-and-total-returns.html">LFGY</a></td><td>YieldMax® Crypto Industry &amp; Tech Portfolio Option Income ETF</td><td class="num" style="color:var(--navy)">40.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">6.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ymax-yield-and-total-returns.html">YMAX</a></td><td>YieldMax® Universe Fund of Option Income ETFs</td><td class="num" style="color:var(--navy)">40.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">40.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/nvyy-yield-and-total-returns.html">NVYY</a></td><td>GraniteShares YieldBOOST NVDA ETF</td><td class="num" style="color:var(--navy)">39.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">30.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/blox-yield-and-total-returns.html">BLOX</a></td><td>Nicholas Crypto Income ETF</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">12.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/babo-yield-and-total-returns.html">BABO</a></td><td>YieldMax® BABA Option Income Strategy</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">14.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/dips-yield-and-total-returns.html">DIPS</a></td><td>YieldMax® Short NVDA Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-53.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/dray-yield-and-total-returns.html">DRAY</a></td><td>YieldMax® DKNG Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-44.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/fby-yield-and-total-returns.html">FBY</a></td><td>YieldMax® META Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">63.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/oark-yield-and-total-returns.html">OARK</a></td><td>YieldMax® Innovation Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">55.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/gpty-yield-and-total-returns.html">GPTY</a></td><td>YieldMax® AI &amp; Tech Portfolio Option Income ETF</td><td class="num" style="color:var(--navy)">36.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">50.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/nfly-yield-and-total-returns.html">NFLY</a></td><td>YieldMax® NFLX Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">35.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">49.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tsmy-yield-and-total-returns.html">TSMY</a></td><td>YieldMax® TSM Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">35.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">104.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/xyzy-yield-and-total-returns.html">XYZY</a></td><td>YieldMax® XYZ Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">35.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">38.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/aipi-yield-and-total-returns.html">AIPI</a></td><td>REX AI Equity Premium Income ETF</td><td class="num" style="color:var(--navy)">35.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">54.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/nvii-yield-and-total-returns.html">NVII</a></td><td>REX NVDA Growth &amp; Income ETF</td><td class="num" style="color:var(--navy)">34.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">68.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/babw-yield-and-total-returns.html">BABW</a></td><td>Roundhill BABA WeeklyPay ETF</td><td class="num" style="color:var(--navy)">34.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-44.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/avgw-yield-and-total-returns.html">AVGW</a></td><td>Roundhill AVGO WeeklyPay ETF</td><td class="num" style="color:var(--navy)">33.00%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">15.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/yeth-yield-and-total-returns.html">YETH</a></td><td>Roundhill Ether Covered Call Strategy ETF</td><td class="num" style="color:var(--navy)">31.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-33.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/miny-yield-and-total-returns.html">MINY</a></td><td>YieldMax® Strategic Metals &amp; Mining Portfolio Option Income ETF</td><td class="num" style="color:var(--navy)">31.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-13.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ymag-yield-and-total-returns.html">YMAG</a></td><td>YieldMax® Magnificent 7 Fund of Option Income ETFs</td><td class="num" style="color:var(--navy)">31.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">69.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/qqqy-yield-and-total-returns.html">QQQY</a></td><td>Defiance Nasdaq 100 Target 30 Income ETF</td><td class="num" style="color:var(--navy)">30.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">53.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/iwmy-yield-and-total-returns.html">IWMY</a></td><td>Defiance R2000 Enhanced Options Income ETF</td><td class="num" style="color:var(--navy)">30.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">42.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/xbty-yield-and-total-returns.html">XBTY</a></td><td>GraniteShares YieldBOOST Bitcoin ETF</td><td class="num" style="color:var(--navy)">30.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-35.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ubew-yield-and-total-returns.html">UBEW</a></td><td>Roundhill UBER WeeklyPay ETF</td><td class="num" style="color:var(--navy)">30.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-31.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/gmey-yield-and-total-returns.html">GMEY</a></td><td>YieldMax® GME Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">30.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-19.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/pypy-yield-and-total-returns.html">PYPY</a></td><td>YieldMax® PYPL Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">30.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-2.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/amzw-yield-and-total-returns.html">AMZW</a></td><td>Roundhill AMZN WeeklyPay ETF</td><td class="num" style="color:var(--navy)">29.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">15.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/rdte-yield-and-total-returns.html">RDTE</a></td><td>Roundhill Russell 2000 0DTE Covered Call Strategy ETF</td><td class="num" style="color:var(--navy)">29.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">41.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/topw-yield-and-total-returns.html">TOPW</a></td><td>Top WeeklyPay™ ETF</td><td class="num" style="color:var(--navy)">29.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">2.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/rdty-yield-and-total-returns.html">RDTY</a></td><td>YieldMax® R2000 0DTE Covered Call ETF</td><td class="num" style="color:var(--navy)">29.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">31.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/nflw-yield-and-total-returns.html">NFLW</a></td><td>Roundhill NFLX WeeklyPay ETF</td><td class="num" style="color:var(--navy)">28.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-43.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/spci-yield-and-total-returns.html">SPCI</a></td><td>Tuttle Capital Space Industry Income Blast ETF</td><td class="num" style="color:var(--navy)">28.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-6.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/goow-yield-and-total-returns.html">GOOW</a></td><td>Roundhill GOOGL WeeklyPay ETF</td><td class="num" style="color:var(--navy)">27.00%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">93.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/aapw-yield-and-total-returns.html">AAPW</a></td><td>Roundhill AAPL WeeklyPay ETF</td><td class="num" style="color:var(--navy)">26.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">34.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/msfo-yield-and-total-returns.html">MSFO</a></td><td>YieldMax® MSFT Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">26.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">58.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/qdty-yield-and-total-returns.html">QDTY</a></td><td>YieldMax® Nasdaq 100 0DTE Covered Call ETF</td><td class="num" style="color:var(--navy)">26.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">22.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tqqy-yield-and-total-returns.html">TQQY</a></td><td>GraniteShares YieldBOOST QQQ ETF</td><td class="num" style="color:var(--navy)">25.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">0.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/qdte-yield-and-total-returns.html">QDTE</a></td><td>Roundhill Innovation-100 0DTE Covered Call Strategy ETF</td><td class="num" style="color:var(--navy)">25.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">57.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/amzy-yield-and-total-returns.html">AMZY</a></td><td>YieldMax® AMZN Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">25.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">87.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/xomo-yield-and-total-returns.html">XOMO</a></td><td>YieldMax® XOM Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">25.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">27.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/fepi-yield-and-total-returns.html">FEPI</a></td><td>Rex Fang &amp; Innovation Equity Premium Income ETF</td><td class="num" style="color:var(--navy)">25.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">67.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/memy-yield-and-total-returns.html">MEMY</a></td><td>Tuttle Capital Meme Stock Income Blast ETF</td><td class="num" style="color:var(--navy)">25.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-26.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/kyld-yield-and-total-returns.html">KYLD</a></td><td>Kurv High Income ETF</td><td class="num" style="color:var(--navy)">24.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-1.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tdax-yield-and-total-returns.html">TDAX</a></td><td>TDAQ LIFT ETF</td><td class="num" style="color:var(--navy)">24.00%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">12.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/msfw-yield-and-total-returns.html">MSFW</a></td><td>Roundhill MSFT WeeklyPay ETF</td><td class="num" style="color:var(--navy)">23.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-6.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/gooy-yield-and-total-returns.html">GOOY</a></td><td>YieldMax® GOOGL Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">23.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">85.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/ybtc-yield-and-total-returns.html">YBTC</a></td><td>Roundhill Bitcoin Covered Call Strategy ETF</td><td class="num" style="color:var(--navy)">20.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">24.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/magy-yield-and-total-returns.html">MAGY</a></td><td>Roundhill Magnificent Seven Covered Call ETF</td><td class="num" style="color:var(--navy)">20.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">24.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/aply-yield-and-total-returns.html">APLY</a></td><td>YieldMax® AAPL Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">20.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">53.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/yqqq-yield-and-total-returns.html">YQQQ</a></td><td>YieldMax® Short N100 Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">20.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-17.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/sdty-yield-and-total-returns.html">SDTY</a></td><td>YieldMax® S&amp;P 500 0DTE Covered Call ETF</td><td class="num" style="color:var(--navy)">20.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">22.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/tsyx-yield-and-total-returns.html">TSYX</a></td><td>TSPY LIFT ETF</td><td class="num" style="color:var(--navy)">20.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">8.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/wmti-yield-and-total-returns.html">WMTI</a></td><td>REX WMT Growth And Income ETF</td><td class="num" style="color:var(--navy)">19.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">1.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/brkc-yield-and-total-returns.html">BRKC</a></td><td>YieldMax® BRKB Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">19.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">3.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/jpo-yield-and-total-returns.html">JPO</a></td><td>YieldMax® JPM Option Income Strategy ETF</td><td class="num" style="color:var(--navy)">19.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">57.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/xdte-yield-and-total-returns.html">XDTE</a></td><td>Roundhill S&amp;P 500 0DTE Covered Call Strategy ETF</td><td class="num" style="color:var(--navy)">18.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">45.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/vaie-yield-and-total-returns.html">VAIE</a></td><td>VegaShares US Equity Autocallable Income ETF</td><td class="num" style="color:var(--navy)">17.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">2.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/brkw-yield-and-total-returns.html">BRKW</a></td><td>Roundhill BRKB WeeklyPay ETF</td><td class="num" style="color:var(--navy)">16.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">2.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/cosw-yield-and-total-returns.html">COSW</a></td><td>Roundhill COST WeeklyPay ETF</td><td class="num" style="color:var(--navy)">15.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num neg">-7.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/odte-yield-and-total-returns.html">ODTE</a></td><td>ODTE  VegaShares SPX NDX RTY Premium Income ETF</td><td class="num" style="color:var(--navy)">14.00%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">6.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/yspy-yield-and-total-returns.html">YSPY</a></td><td>GraniteShares YieldBOOST SPY ETF</td><td class="num" style="color:var(--navy)">10.00%</td><td style="text-align:center;font-weight:bold">YES</td><td class="num pos">15.00%</td></tr><tr><td><a href="https://marvinsmx.github.io/weekly-payout//yield/week-yield-and-total-returns.html">WEEK</a></td><td>Roundhill Weekly T-Bill ETF</td><td class="num" style="color:var(--navy)">3.50%</td><td style="text-align:center;font-weight:bold">NO</td><td class="num pos">6.00%</td></tr></tbody></table>
 <p class="disc">Data is provided for informational and educational purposes only and is not investment advice. Verify all figures with the fund issuer.</p>
 </main>
-<footer class="site"><p><a href="https://marvinsmx.github.io/weekly-payout//terms.html">Terms of Use</a> | <a href="https://marvinsmx.github.io/weekly-payout//privacy.html">Privacy Policy</a> | <a href="https://marvinsmx.github.io/weekly-payout//faq.html">FAQ</a> | <a href="https://marvinsmx.github.io/weekly-payout//blog.html">Blog</a> | <a href="https://marvinsmx.github.io/weekly-payout//weekly-dividend-calculator.html">Weekly Dividend Calculator</a> | <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br><a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>Want To Sponsor WeeklyPayout.com? Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a></p><div style="margin:20px 0"><a href="https://marvinsmx.github.io/yield-atlas/?layout=profile" target="_blank" style="display:inline-block;background:#C4F542;color:#ffffff;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.15)">See 100+ YieldAtlas HERE!</a></div></footer>
+<footer class="site"><p><a href="https://marvinsmx.github.io/weekly-payout//terms.html">Terms of Use</a> | <a href="https://marvinsmx.github.io/weekly-payout//privacy.html">Privacy Policy</a> | <a href="https://marvinsmx.github.io/weekly-payout//faq.html">FAQ</a> | <a href="https://marvinsmx.github.io/weekly-payout//blog.html">Blog</a> | <a href="https://marvinsmx.github.io/weekly-payout//weekly-dividend-calculator.html">Weekly Dividend Calculator</a> | <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br><a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>Want To Sponsor WeeklyPayout.com? Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a></p><div style="margin:20px 0"><a href="https://marvinsmx.github.io/yield-atlas/?layout=profile" target="_blank" style="display:inline-block;background:#4D7C0F;color:#ffffff;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.15)">See 100+ YieldAtlas HERE!</a></div></footer>
 </body>
 </html>
