@@ -43,21 +43,26 @@ body {
 a { color: #0C2D4A !important; }
 a:hover { color: #4D7C0F !important; }
 
-header, .nx-header, body > header:not(.nx-skip) {
-  width: 100% !important; background: #0C2D4A !important; color: #ffffff !important;
+header, .nx-header, .site-header, body > header:not(.nx-skip) {
+  width: 100% !important; align-self: stretch !important; background: #0C2D4A !important; color: #ffffff !important;
   text-align: center !important; padding: 16px 20px 14px !important;
   border-bottom: 3px solid #4D7C0F !important;
 }
-.logo, .nx-logo, .logo-text { font-family: "Merriweather", Georgia, serif !important; font-weight: 900 !important; font-size: clamp(22px, 5.5vw, 36px) !important; color: #A3E635 !important; }
+.logo, .nx-logo, .logo-text, .logo-link, .header-logo, a.logo-link {
+  font-family: "Merriweather", Georgia, serif !important; font-weight: 900 !important;
+  font-size: clamp(22px, 5.5vw, 36px) !important; color: #A3E635 !important; text-decoration: none !important;
+}
 .logo span, .nx-logo span { color: #A3E635 !important; }
 .logo-sub, .nx-tagline { font-size: 0.64em !important; font-weight: 700 !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; color: rgba(255,255,255,0.78) !important; margin-top: 4px !important; }
 .header-links, .nx-nav { display: flex !important; flex-wrap: wrap !important; gap: 8px !important; justify-content: center !important; margin-top: 12px !important; }
-.header-link, .nx-nav a {
+header a, .site-header a, .header-links a, .header-link, .nx-nav a, .header-cta, a.header-cta {
   display: inline-flex !important; padding: 8px 16px !important; border: 2px solid #4D7C0F !important;
   border-radius: 999px !important; background: rgba(77,124,15,0.2) !important; color: #D9F99D !important;
   font-weight: 900 !important; font-size: 13px !important; text-decoration: none !important;
 }
-.header-link:hover, .nx-nav a:hover { background: #4D7C0F !important; color: #ffffff !important; }
+header a.logo-link, a.logo-link { display: inline-block !important; border: none !important; background: transparent !important; padding: 0 !important; color: #A3E635 !important; }
+header a:hover, .header-links a:hover, .header-link:hover, .nx-nav a:hover, .header-cta:hover { background: #4D7C0F !important; color: #ffffff !important; }
+.network-bar { display: none !important; }
 
 .site-network-bar { width: 100% !important; background: #ffffff !important; border-bottom: 1px solid #dddddd !important; padding: 5px 0 !important; }
 .site-network-track { width: 94% !important; max-width: 1400px !important; margin: 0 auto !important; padding: 0 15px !important; display: flex !important; align-items: center !important; gap: 5px !important; overflow-x: auto !important; white-space: nowrap !important; }
