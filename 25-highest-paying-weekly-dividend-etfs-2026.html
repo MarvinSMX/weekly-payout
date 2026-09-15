@@ -385,7 +385,7 @@ async function loadTop25(){
 
     if (!csv) {
         try {
-            const res = await fetch(SHEET_CSV_URL + '&t=' + now);
+            const res = await fetch(SHEET_CSV_URL + '?t=' + now);
             csv = await res.text();
             safeSessionSet(CACHE_KEY, csv);
             safeSessionSet(CACHE_KEY + '_time', String(now));

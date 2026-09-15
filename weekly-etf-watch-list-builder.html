@@ -260,7 +260,7 @@ function returnClass(val) {
 
 async function loadETFs() {
   try {
-    const res = await fetch(CSV_URL + '&t=' + Date.now());
+    const res = await fetch(CSV_URL + '?t=' + Date.now());
     const text = await res.text();
     const lines = text.trim().split('\n');
     allETFs = [];
