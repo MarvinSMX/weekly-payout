@@ -200,11 +200,10 @@ function header() {
       <a href="https://marvinsmx.github.io/monthly-payout/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
       <a href="https://marvinsmx.github.io/orbit-funds/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
       <a href="https://marvinsmx.github.io/return-atlas/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
-      <a href="https://dividendstack.com/" class="site-pill" title="Dividend tools directory">🛠️ DividendStack.com</a>
     </div></div>`;
 }
 function footer(year) {
-  return `<footer class="site"><p><a href="${SITE_URL}/terms.html">Terms of Use</a> | <a href="${SITE_URL}/privacy.html">Privacy Policy</a> | <a href="${SITE_URL}/faq.html">FAQ</a> | <a href="${SITE_URL}/blog.html">Blog</a> | <a href="${SITE_URL}/weekly-dividend-calculator.html">Weekly Dividend Calculator</a> | <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br><a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>Want To Sponsor WeeklyPayout.com? Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a></p><div style="margin:20px 0"><a href="https://marvinsmx.github.io/yield-atlas/?layout=profile" target="_blank" style="display:inline-block;background:#2E5D54;color:#ffffff;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.15)">See 100+ YieldAtlas HERE!</a></div></footer>`;
+  return `<footer class="site"><p><a href="${SITE_URL}/terms.html">Terms of Use</a> | <a href="${SITE_URL}/privacy.html">Privacy Policy</a> | <a href="${SITE_URL}/faq.html">FAQ</a> | <a href="${SITE_URL}/blog.html">Blog</a> | <a href="${SITE_URL}/weekly-dividend-calculator.html">Weekly Dividend Calculator</a> | <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br>Want To Sponsor WeeklyPayout.com? Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a></p><div style="margin:20px 0"><a href="https://marvinsmx.github.io/yield-atlas/?layout=profile" target="_blank" style="display:inline-block;background:#2E5D54;color:#ffffff;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.15)">See 100+ YieldAtlas HERE!</a></div></footer>`;
 }
 
 /* ---------- per-ticker page ---------- */
