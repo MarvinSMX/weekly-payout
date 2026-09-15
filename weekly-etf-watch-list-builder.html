@@ -8,25 +8,25 @@
 
 <meta property="og:title" content="Swipe Weekly Dividend ETFs • WeeklyPayout.com">
 <meta property="og:description" content="Swipe Yes or No on the best weekly dividend ETFs. Build your watchlist for free.">
-<meta property="og:url" content="https://weeklypayout.com/swipe">
+<meta property="og:url" content="https://marvinsmx.github.io/weekly-payout/swipe">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Swipe Weekly Dividend ETFs • WeeklyPayout.com">
 <meta name="twitter:description" content="Swipe Yes or No on the best weekly dividend ETFs. Build your watchlist for free.">
 
-<link rel="canonical" href="https://weeklypayout.com/swipe">
+<link rel="canonical" href="https://marvinsmx.github.io/weekly-payout/swipe">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Weekly ETF Swipe Tool",
-  "url": "https://weeklypayout.com/swipe",
+  "url": "https://marvinsmx.github.io/weekly-payout/swipe",
   "description": "An interactive tool to discover the best weekly dividend ETFs. Swipe yes or no on 100+ high-yield weekly dividend ETFs and build a personal watchlist. Free on WeeklyPayout.com.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Any",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "publisher": { "@type": "Organization", "name": "WeeklyPayout.com", "url": "https://weeklypayout.com" }
+  "publisher": { "@type": "Organization", "name": "WeeklyPayout.com", "url": "https://marvinsmx.github.io/weekly-payout/" }
 }
 </script>
 
@@ -157,7 +157,7 @@ footer a { color:var(--navy); text-decoration:none; font-weight:700; margin:0 6p
 <body>
 
 <header class="site-header">
-  <a href="https://weeklypayout.com" class="header-logo">WeeklyPayout.com</a>
+  <a href="https://marvinsmx.github.io/weekly-payout/" class="header-logo">WeeklyPayout.com</a>
   <button class="saved-btn" onclick="showSaved()">❤️ Saved (<span id="savedCount">0</span>)</button>
 </header>
 
@@ -166,7 +166,7 @@ footer a { color:var(--navy); text-decoration:none; font-weight:700; margin:0 6p
 </div>
 
 <div class="pro-wrap">
-  <a class="pro-btn" href="https://weeklypayout.com" target="_blank">See Full Weekly ETF Rankings →</a>
+  <a class="pro-btn" href="https://marvinsmx.github.io/weekly-payout/" target="_blank">See Full Weekly ETF Rankings →</a>
 </div>
 
 <div class="controls-row">
@@ -228,17 +228,17 @@ footer a { color:var(--navy); text-decoration:none; font-weight:700; margin:0 6p
 </div>
 
 <footer>
-  <a href="https://weeklypayout.com">WeeklyPayout.com</a> |
-  <a href="https://weeklypayout.com/terms.html">Terms</a> |
-  <a href="https://weeklypayout.com/privacy.html">Privacy</a> |
-  <a href="https://weeklypayout.com/faq.html">FAQ</a> |
-  <a href="https://yieldatlas.com/" target="_blank">YieldAtlas</a><br><br>
+  <a href="https://marvinsmx.github.io/weekly-payout/">WeeklyPayout.com</a> |
+  <a href="https://marvinsmx.github.io/weekly-payout/terms.html">Terms</a> |
+  <a href="https://marvinsmx.github.io/weekly-payout/privacy.html">Privacy</a> |
+  <a href="https://marvinsmx.github.io/weekly-payout/faq.html">FAQ</a> |
+  <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank">YieldAtlas</a><br><br>
   Data updated daily • Not financial advice • NOT a buy or sell signal!<br>
   WeeklyPayout.com is for entertainment purposes ONLY.
 </footer>
 
 <script>
-const CSV_URL = 'data/seed.csv';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1P00pQ6hNvYolxzrKYIuxC-AH1xFBpMtsn-NwC17W4vQazk3ql69ZmSmW8J-jp7OaUmKLV5v2KPI3/pub?gid=0&single=true&output=csv';
 
 let allETFs = [];
 let deck = [];
@@ -260,7 +260,7 @@ function returnClass(val) {
 
 async function loadETFs() {
   try {
-    const res = await fetch(CSV_URL + '?t=' + Date.now());
+    const res = await fetch(CSV_URL + '&t=' + Date.now());
     const text = await res.text();
     const lines = text.trim().split('\n');
     allETFs = [];
@@ -435,7 +435,7 @@ function showOffer() {
 function closeOffer() { document.getElementById('offerModal').style.display = 'none'; }
 
 function goToSite() {
-  window.open('https://weeklypayout.com', '_blank');
+  window.open('https://marvinsmx.github.io/weekly-payout/', '_blank');
   closeOffer();
 }
 
@@ -570,16 +570,16 @@ window.onload = loadETFs;
     <strong>Disclaimer:</strong> This tool is for entertainment and educational purposes only. ETF data is sourced from public information
     and updated daily but may not be 100% accurate. Nothing on this page is a buy or sell signal.
     Always consult a licensed financial advisor before making investment decisions. |
-    <a href="https://weeklypayout.com" style="color:#001f3d;font-weight:700">See the full ranked list of 100+ weekly dividend ETFs →</a>
+    <a href="https://marvinsmx.github.io/weekly-payout/" style="color:#001f3d;font-weight:700">See the full ranked list of 100+ weekly dividend ETFs →</a>
   </p>
 </section>
 
 <footer style="text-align:center;padding:40px 20px;color:#666;font-size:12px;border-top:1px solid #e2e8f0;margin-top:10px">
-  <a href="https://weeklypayout.com" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">WeeklyPayout.com</a> |
-  <a href="https://weeklypayout.com/terms.html" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">Terms</a> |
-  <a href="https://weeklypayout.com/privacy.html" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">Privacy</a> |
-  <a href="https://weeklypayout.com/faq.html" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">FAQ</a> |
-  <a href="https://yieldatlas.com/" target="_blank" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">YieldAtlas</a><br><br>
+  <a href="https://marvinsmx.github.io/weekly-payout/" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">WeeklyPayout.com</a> |
+  <a href="https://marvinsmx.github.io/weekly-payout/terms.html" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">Terms</a> |
+  <a href="https://marvinsmx.github.io/weekly-payout/privacy.html" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">Privacy</a> |
+  <a href="https://marvinsmx.github.io/weekly-payout/faq.html" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">FAQ</a> |
+  <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" style="color:#001f3d;font-weight:700;text-decoration:none;margin:0 6px">YieldAtlas</a><br><br>
   Data updated daily &bull; Not financial advice &bull; NOT a buy or sell signal!<br>
   WeeklyPayout.com is for entertainment purposes ONLY.
 </footer>

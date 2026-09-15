@@ -15,9 +15,9 @@ const path = require("path");
    ============================================================ */
 const CSV_URL =
   process.env.CSV_URL ||
-  "data/seed.csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vT1P00pQ6hNvYolxzrKYIuxC-AH1xFBpMtsn-NwC17W4vQazk3ql69ZmSmW8J-jp7OaUmKLV5v2KPI3/pub?gid=0&single=true&output=csv";
 
-const SITE_URL = "https://weeklypayout.com";
+const SITE_URL = "https://marvinsmx.github.io/weekly-payout/";
 const OUT_DIR = path.join(__dirname, "yield"); // pages land in /yield/
 const SITEMAP_PATH = path.join(__dirname, "sitemap-yield.xml");
 const BRAND = "WeeklyPayout";
@@ -194,17 +194,17 @@ const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Lato:wght@40
 function header() {
   return `<header class="site"><a href="${SITE_URL}/"><img src="Weeklyftps 3.png" alt="WeeklyPayout.com Logo" class="banner-img"></a></header>
 <div class="site-network-bar"><div class="site-network-track"><span class="site-network-label">Our Sites:</span>
-      <a href="https://growthatlas.com/" class="site-pill" title="Growth ETF rankings">📈 GrowthAtlas.com</a>
-      <a href="https://yieldatlas.com/" class="site-pill" title="Dividend ETF rankings">💵 YieldAtlas.com</a>
-      <a href="https://weeklypayout.com/" class="site-pill" title="Weekly paying dividend ETFs">📅 WeeklyPayout.com</a>
-      <a href="https://monthlypayout.com/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
-      <a href="https://orbitfunds.com/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
-      <a href="https://returnatlas.com/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
+      <a href="https://marvinsmx.github.io/growth-atlas/" class="site-pill" title="Growth ETF rankings">📈 GrowthAtlas.com</a>
+      <a href="https://marvinsmx.github.io/yield-atlas/" class="site-pill" title="Dividend ETF rankings">💵 YieldAtlas.com</a>
+      <a href="https://marvinsmx.github.io/weekly-payout/" class="site-pill" title="Weekly paying dividend ETFs">📅 WeeklyPayout.com</a>
+      <a href="https://marvinsmx.github.io/monthly-payout/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
+      <a href="https://marvinsmx.github.io/orbit-funds/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
+      <a href="https://marvinsmx.github.io/return-atlas/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
       <a href="https://dividendstack.com/" class="site-pill" title="Dividend tools directory">🛠️ DividendStack.com</a>
     </div></div>`;
 }
 function footer(year) {
-  return `<footer class="site"><p><a href="${SITE_URL}/terms.html">Terms of Use</a> | <a href="${SITE_URL}/privacy.html">Privacy Policy</a> | <a href="${SITE_URL}/faq.html">FAQ</a> | <a href="${SITE_URL}/blog.html">Blog</a> | <a href="${SITE_URL}/weekly-dividend-calculator.html">Weekly Dividend Calculator</a> | <a href="https://yieldatlas.com/" target="_blank" rel="noopener">YieldAtlas</a><br><br><a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>Want To Sponsor WeeklyPayout.com? Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a></p><div style="margin:20px 0"><a href="https://yieldatlas.com/?layout=profile" target="_blank" style="display:inline-block;background:#2E5D54;color:#ffffff;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.15)">See 100+ YieldAtlas HERE!</a></div></footer>`;
+  return `<footer class="site"><p><a href="${SITE_URL}/terms.html">Terms of Use</a> | <a href="${SITE_URL}/privacy.html">Privacy Policy</a> | <a href="${SITE_URL}/faq.html">FAQ</a> | <a href="${SITE_URL}/blog.html">Blog</a> | <a href="${SITE_URL}/weekly-dividend-calculator.html">Weekly Dividend Calculator</a> | <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br><a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>Want To Sponsor WeeklyPayout.com? Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a></p><div style="margin:20px 0"><a href="https://marvinsmx.github.io/yield-atlas/?layout=profile" target="_blank" style="display:inline-block;background:#2E5D54;color:#ffffff;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.15)">See 100+ YieldAtlas HERE!</a></div></footer>`;
 }
 
 /* ---------- per-ticker page ---------- */
@@ -334,7 +334,7 @@ ${intro}
 <div class="pro-feat"><span class="ico">🗓️</span><b>Payout History</b><span>Full distribution records</span></div>
 <div class="pro-feat"><span class="ico">🔍</span><b>Advanced Filtering</b><span>Screen the entire universe</span></div>
 </div>
-<a class="pro-btn" href="https://yieldatlaspro.com/" rel="noopener">Open the PRO Terminal <span class="arrow">→</span></a>
+<a class="pro-btn" href="https://marvinsmx.github.io/yield-atlas-pro/" rel="noopener">Open the PRO Terminal <span class="arrow">→</span></a>
 </div>
 
 <h2>ETFs With Similar Yields</h2>
